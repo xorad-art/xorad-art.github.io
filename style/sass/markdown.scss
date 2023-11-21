@@ -1,0 +1,49 @@
+.markdown-body {
+    margin: 0 auto;
+    max-width: 900px;
+    padding: 30px;
+    transition: 0.5s;
+
+    img {
+        // Centered
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 100%;
+        max-height: 40vh;
+    }
+
+    h3 {
+        text-align: left;
+        // 20px padding left and right
+        margin: 0 20px;
+        margin-top: 40px;
+        padding-left: 20px;
+        // A line under the heading
+        border-bottom: 1px solid $secondary-color;
+    }
+
+    li {
+        text-align: left;
+    }
+
+    // Bold text is instead of bold highlighted text
+    strong {
+        font-weight: inherit;
+        color: $accent-color;
+    }
+
+    // Code blocks
+    pre {
+        background-color: $bg-color-light;
+        padding: 10px;
+        margin: 10px;
+        border-radius: 5px;
+        overflow-x: auto;
+
+        code {
+            // Make the code look like code
+            font-family: monospace;
+        }
+    }
+}

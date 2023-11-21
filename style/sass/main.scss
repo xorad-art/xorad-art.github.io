@@ -1,0 +1,218 @@
+$bg-color: #161923;
+$bg-color-light: #2a2e3b;
+$primary-color: #bcbdd0;
+$secondary-color: #737480;
+$text-color: #bcbdd0;
+$accent-color: #ffdd55;
+
+$nav-height: 54px;
+$footer-height: 81px;
+
+$tablet-width: 600px;
+$desktop-width: 900px;
+
+html, body {
+	height: 100%;
+}
+
+body {
+	font-family: sans-serif;
+	text-align: center;
+	margin: 0;
+	background-color: $bg-color;
+	color: $text-color;
+
+	display: flex;
+    flex-direction: column;
+}
+
+// Hidden attribute
+.hidden {
+	display: none;
+}
+
+// Default styles for all sections (Mobile) //////////////////////
+//////////////////////////////////////////////////////////////////
+
+// Links will be styled with the accent color
+a {
+	text-decoration: none;
+	color: $primary-color;
+	transition: 0.2s;
+
+	&:hover {
+		color: $accent-color;
+	}
+}
+
+@import "nav";
+
+$featured-height: 400px;
+#main {
+	flex: 1;
+
+	h1 {
+		margin-top: 20px;
+		margin-bottom: 20px;
+		// padding: 20 0 0 20px;
+		// color: white;
+	}
+	.description {
+		padding: 0;
+		margin: 10px;
+		text-align: center;
+		color: $secondary-color;
+	}
+
+	h2 {
+		padding: 10px;
+		margin: 0px;
+		background-color: $bg-color-light;
+	}
+
+	p {
+		padding-left: 20px;
+		padding-right: 20px;
+		text-align: left;
+		// max-width: 700px;
+		line-height: 1.5em;
+		a {
+			text-decoration: underline;
+		}
+	}
+
+	#featured {
+		position: relative;
+
+		h3 {
+			color: $accent-color;
+		}
+		p {
+			text-align: center;
+		}
+
+		.left, .right {
+			width: 100%;
+			height: $featured-height;
+			position: relative;
+		}
+
+		.container img {
+			width: 100%;
+			height: $featured-height;
+			object-fit: cover;
+			// margin-bottom: 10px;
+		}
+
+		.left .container {
+			float: left;
+		}
+
+		.right .container {
+			float: right;
+		}
+
+		.container {
+			width: 80%;
+			position: relative;
+			overflow: hidden;
+		}
+
+		.left .container::after {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: linear-gradient(to right, rgba(255, 255, 255, 0), $bg-color);
+			pointer-events: none;
+		}
+
+		.right .container::after {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: linear-gradient(to left, rgba(255, 255, 255, 0), $bg-color);
+			pointer-events: none;
+		}
+
+		.image-overlay {
+			position: absolute;
+			top: $featured-height - 200px;
+			width: 90%;
+			height: 30%;
+			background: rgba(0, 0, 0, 0.7);
+			padding: 1em;
+		}
+
+		.left .image-overlay {
+			right: -100%;
+			box-sizing: border-box;
+			transition: transform 0.4s ease-in-out;
+			transform: translateX(100%);
+		}
+
+		.right .image-overlay {
+			right: 100%;
+			box-sizing: border-box;
+			transition: transform 0.4s ease-in-out;
+			transform: translateX(-100%);
+		}
+
+		.left:hover .image-overlay{
+			transform: translateX(0);
+			right: 0;
+		}
+
+		.right:hover .image-overlay {
+			transform: translateX(10);
+			right: 12%;
+		}
+	}
+}
+
+@import "markdown";
+
+@import "footer";
+
+
+// Settings for Tablet ///////////////////////////////////////////
+//////////////////////////////////////////////////////////////////
+@media only screen and (min-width: $tablet-width) {
+	// For testing purposes
+	.logo {
+		background-color: $bg-color;
+	}
+	main {
+		// margin: 0 auto;
+
+		.featured {
+			width: 80%;
+			margin-left: auto;
+			margin-right: auto;
+			.image-overlay {
+				width: 100%;
+			}
+		}
+	}
+}
+
+// Settings for Desktop //////////////////////////////////////////
+//////////////////////////////////////////////////////////////////
+
+@media only screen and (min-width: $desktop-width) {
+	// For testing purposes
+	.logo {
+		background-color: $bg-color-light;
+	}
+
+	main {
+		min-width: 720px;
+		width: 50%;
+		margin: 0 auto;
+	}
+}
