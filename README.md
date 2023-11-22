@@ -22,7 +22,7 @@ http-server
 Thanks to using Sass, I have to compile the files into css. With the `watch` command, any change in the `/sass/` folder is automatically compiled to `/css/`.
 
 ```bash
-sass --watch style/sass/main.scss:style/css/style.css --sourcemap=none
+sass --watch style/sass/main.scss:style/css/style.css
 ```
 
 If at any point I forget what to do I can always go back here and read this.

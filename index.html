@@ -14,54 +14,23 @@
 <body>
     <nav id="nav"></nav>
 
-    <div id="main" class="hidden">
-        <p class="description">Illustrator, sometimes developer, occasionally clever</p>
-        <div id="featured">
-            <h2>Featured</h2>
-            <div class="left">
-                <div class="container"><img src="assets/media/braum.jpg" alt="Some of my work"></div><a
-                    href="art/recent-ilustrations" class="image-overlay">
-                    <h3 class="title">Recent Ilustrations</h3>
-                    <p class="description">Whenever I find time to draw</p>
-                </a>
-            </div>
-            <div class="right">
-                <div class="container"><img src="assets/media/Leptos_logo_miniature.jpg" alt="Some of my work"></div><a
-                    href="code/this-website" class="image-overlay">
-                    <h3 class="title">This Website</h3>
-                    <p class="description">Made piece by piece inside the Rust Leptos Framework</p>
-                </a>
-            </div>
-            <div class="left">
-                <div class="container"><img src="assets/media/10.jpg" alt="Some of my work"></div><a
-                    href="other/working-on-a-degree" class="image-overlay">
-                    <h3 class="title">Working on a Degree</h3>
-                    <p class="description">Computer Systems Engineering in Mexico</p>
-                </a>
-            </div>
-            <div class="right">
-                <div class="container"><img src="https://picsum.photos/200/301" alt="Some of my work"></div><a
-                    href="writing/check-out-my-blog" class="image-overlay">
-                    <h3 class="title">Check out my blog</h3>
-                    <p class="description">I write about whatever I feel like writing about</p>
-                </a>
-            </div>
-            <div class="left">
-                <div class="container"><img src="https://picsum.photos/200/302" alt="Some of my work"></div><a
-                    href="code/deep-learning-and-music" class="image-overlay">
-                    <h3 class="title">Deep Learning and Music</h3>
-                    <p class="description">A project that uses deep learning to categorize music</p>
-                </a>
-            </div>
-        </div>
+    <div id="main">
     </div>
 
     <footer id="footer">
     </footer>
     <script>
         loadTemplate("nav", "templates/nav.html");
-        loadPrevContent("main");
-        generateFeatured();
+        // If there's a fragment identifier, load it
+        // Otherwise, load the main page
+        if (window.location.hash) {
+            console.log("Loading previous content");
+            const file = decodeURIComponent(window.location.hash.substring(1));
+            loadMarkdown("main", file);
+        } else {
+            console.log("Loading main content");
+            showFeatured("main");
+        }
         loadTemplate("footer", "templates/footer.html");
     </script>
 </body>
