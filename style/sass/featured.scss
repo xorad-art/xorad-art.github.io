@@ -1,0 +1,92 @@
+#featured {
+    position: relative;
+
+    h3 {
+        color: $accent-color;
+    }
+    p {
+        text-align: center;
+    }
+
+    .left, .right {
+        width: 100%;
+        height: $featured-height;
+        position: relative;
+    }
+
+    .container img {
+        width: 100%;
+        height: $featured-height;
+        object-fit: cover;
+        // margin-bottom: 10px;
+    }
+
+    .left .container {
+        float: left;
+    }
+
+    .right .container {
+        float: right;
+    }
+
+    .container {
+        width: 80%;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .left .container::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to right, rgba(255, 255, 255, 0), $bg-color);
+        pointer-events: none;
+    }
+
+    .right .container::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to left, rgba(255, 255, 255, 0), $bg-color);
+        pointer-events: none;
+    }
+
+    .image-overlay {
+        position: absolute;
+        top: $featured-height - 200px;
+        width: 90%;
+        height: 30%;
+        background: rgba(0, 0, 0, 0.7);
+        padding: 1em;
+    }
+
+    .left .image-overlay {
+        right: -100%;
+        box-sizing: border-box;
+        transition: transform 0.4s ease-in-out;
+        transform: translateX(100%);
+    }
+
+    .right .image-overlay {
+        right: 100%;
+        box-sizing: border-box;
+        transition: transform 0.4s ease-in-out;
+        transform: translateX(-100%);
+    }
+
+    .left:hover .image-overlay{
+        transform: translateX(0);
+        right: 0;
+    }
+
+    .right:hover .image-overlay {
+        transform: translateX(10);
+        right: 12%;
+    }
+}

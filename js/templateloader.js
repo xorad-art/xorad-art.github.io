@@ -79,10 +79,7 @@ function showFeatured(element) {
 // Makes the changes to the page relating to the footer
 // links and contact information
 function displayContactInfo() {
-    document.getElementById("footer").classList.toggle("hidden");
-    // loadTemplate("main", "templates/contact.html");
-    // Wait for the animation to finish
-    setTimeout(function () {
-        loadTemplate("footer", "templates/contact.html");
-    }, 500);
+    document.getElementById("footer").classList.toggle("fade-out");
+
+    loadTemplate("main", "templates/contact.html");
 }
