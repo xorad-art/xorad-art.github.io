@@ -1,4 +1,6 @@
 
+const CONTENT_FOLDER = "assets/content/";
+
 // Loads the template from the given html file and modifies the given element
 // with the template.
 function loadTemplate(element, templateFile) {
@@ -17,7 +19,7 @@ function loadMarkdown(element, markdownFile) {
     const container = document.getElementById(element);
     window.location.hash = encodeURIComponent(markdownFile);
 
-    fetch(markdownFile) // Adjust the path as needed
+    fetch(CONTENT_FOLDER + markdownFile) // Adjust the path as needed
             .then(response => response.text())
             .then(markdown => {
                 const output = "<div class='markdown-body'>" + marked.parse(markdown) + "</div>";
@@ -80,6 +82,6 @@ function showFeatured(element) {
 // links and contact information
 function displayContactInfo() {
     document.getElementById("footer").classList.toggle("fade-out");
-
-    loadTemplate("main", "templates/contact.html");
+    document.getElementById("contact").classList.toggle("fade-out");
+    loadTemplate("contact", "templates/contact.html");
 }
