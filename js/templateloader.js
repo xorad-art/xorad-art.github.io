@@ -80,8 +80,39 @@ function showFeatured(element) {
 
 // Makes the changes to the page relating to the footer
 // links and contact information
-function displayContactInfo() {
-    document.getElementById("footer").classList.toggle("fade-out");
-    document.getElementById("contact").classList.toggle("fade-out");
-    loadTemplate("contact", "templates/contact.html");
+async function toggleContactInfo() {
+    const footer = document.getElementById("footer");
+    const contact = document.getElementById("contact");
+
+    if (contact.classList.contains("hidden")) {
+        // If the contact info is hidden, load the template
+        loadTemplate("contact", "templates/contact.html");
+
+        // And immediately unhide and fade in the contact info
+        contact.classList.toggle("hidden");
+        footer.classList.toggle("fade-out")
+
+        // Wait a moment and fade in the contact info
+        setTimeout(() => {
+            contact.classList.toggle("fade-out");
+        }, 50);
+
+        // Wait for the animation to finish and hide the footer
+        setTimeout(() => {
+            footer.classList.toggle("hidden");
+        }, 500);
+    } else {
+        // If the contact info is visible, hide it and fade in the footer
+        footer.classList.toggle("hidden");
+        contact.classList.toggle("fade-out");
+
+        setTimeout(() => {
+            footer.classList.toggle("fade-out");
+        }, 50);
+
+        // Wait for the animation to finish and hide the contact info
+        setTimeout(() => {
+            contact.classList.toggle("hidden");
+        }, 500);
+    }
 }

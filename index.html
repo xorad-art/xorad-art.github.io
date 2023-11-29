@@ -17,9 +17,13 @@
     <div id="main">
     </div>
 
+    <div id="contact" class="fade-toggle fade-out hidden">
+        Should be invisible
+    </div>
     <footer id="footer" class="fade-toggle">
     </footer>
     <script>
+        // Load header
         loadTemplate("nav", "templates/nav.html");
         // If there's a fragment identifier, load it
         // Otherwise, load the main page
@@ -31,6 +35,7 @@
             console.log("Loading main content");
             showFeatured("main");
         }
+        // Finally, load the footer
         loadTemplate("footer", "templates/footer.html");
     </script>
 </body>

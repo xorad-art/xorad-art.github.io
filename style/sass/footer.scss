@@ -1,3 +1,5 @@
+
+
 footer {
 	position: relative;
 	clear: both;
@@ -14,24 +16,9 @@ footer {
 		padding-left: 0px;
 		margin: 5px;
 		display: flex;
-		list-style: none;
 		justify-content: center;
 		align-items: center;
-
-		img {
-			filter:
-				brightness(0%) 
-				invert(91%) 
-				sepia(95%) 
-				saturate(7467%) 
-				hue-rotate(314deg) 
-				brightness(105%) 
-				contrast(113%);
-			height: 25px;
-			margin: 5px;
-		}
 	}
-
 	p {
 		margin: 5px;
 		font-size: small;
