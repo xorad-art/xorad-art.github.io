@@ -8,8 +8,8 @@ $accent-color: #ffdd55;
 $nav-height: 54px;
 $footer-height: 81px;
 
-$tablet-width: 600px;
-$desktop-width: 900px;
+$tablet-width: 768px;
+$desktop-width: 1025px;
 
 html, body {
 	height: 100%;
@@ -128,39 +128,25 @@ $featured-height: 400px;
 			contrast(113%);
 		height: 25px;
 		margin: 5px;
+
+		// On hover
+		&:hover {
+			filter: brightness(0%)invert(100%);
+		}
 	}
 }
 
 .closebtn {
-	position: absolute;
-	top: 0;
-	right: 0;
-	margin: 10px;
-
-	height: 30px;
-	width: 30px;
 	font-size: large;
+	position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 5px 10px;
+    color: white;
+    border: none;
 }
 
-#contact {
-	background-color: $bg-color-light;
-	position: fixed;
-	top: $nav-height;
-	margin: 5%;
-
-	table {
-		margin: 10px;
-	}
-
-	tr {
-		max-height: 80px;
-	}
-
-	img {
-		width: 80px;
-		height: 80px;
-	}
-}
+@import "contact-info";
 
 @import "featured";
 

@@ -1,7 +1,9 @@
+const footer = document.getElementById("footer");
+const contact = document.getElementById("contact");
 
 const CONTENT_FOLDER = "assets/content/";
 
-// Loads the template from the given html file and modifies the given element
+// Loads html from the given file and modifies the element content
 // with the template.
 function loadTemplate(element, templateFile) {
     const container = document.getElementById(element);
@@ -18,6 +20,11 @@ function loadTemplate(element, templateFile) {
 function loadMarkdown(element, markdownFile) {
     const container = document.getElementById(element);
     window.location.hash = encodeURIComponent(markdownFile);
+
+    // Get the contact info out of the way
+    if (!contact.classList.contains("hidden")){
+        toggleContactInfo();
+    }
 
     fetch(CONTENT_FOLDER + markdownFile) // Adjust the path as needed
             .then(response => response.text())
@@ -81,28 +88,24 @@ function showFeatured(element) {
 // Makes the changes to the page relating to the footer
 // links and contact information
 async function toggleContactInfo() {
-    const footer = document.getElementById("footer");
-    const contact = document.getElementById("contact");
-
-    if (contact.classList.contains("hidden")) {
-        // If the contact info is hidden, load the template
+    // If is the first time the contact info is loaded, load the template
+    if (contact.innerHTML === ""){
         loadTemplate("contact", "templates/contact.html");
+    }
 
-        // And immediately unhide and fade in the contact info
+    // Then do the animation
+    if (contact.classList.contains("hidden")){
         contact.classList.toggle("hidden");
         footer.classList.toggle("fade-out")
 
-        // Wait a moment and fade in the contact info
         setTimeout(() => {
             contact.classList.toggle("fade-out");
         }, 50);
 
-        // Wait for the animation to finish and hide the footer
         setTimeout(() => {
             footer.classList.toggle("hidden");
         }, 500);
     } else {
-        // If the contact info is visible, hide it and fade in the footer
         footer.classList.toggle("hidden");
         contact.classList.toggle("fade-out");
 
@@ -110,7 +113,6 @@ async function toggleContactInfo() {
             footer.classList.toggle("fade-out");
         }, 50);
 
-        // Wait for the animation to finish and hide the contact info
         setTimeout(() => {
             contact.classList.toggle("hidden");
         }, 500);

@@ -1,0 +1,41 @@
+#contact {
+	background-color: #00000040;
+	position: fixed;
+	top: $nav-height;
+    width: 90%;
+    height: 90%;
+    justify-content: center;
+    align-items: center;
+    padding: 0 5% 5% 5%;
+
+    #content {
+        background-color: $bg-color-light;
+        max-width: 500px; // Set max width to 600px
+        margin: 0 auto; // Center the div
+        margin-top: $nav-height;
+        border-radius: 10px;
+        padding: 5px;
+		position: relative;
+    }
+
+	table {
+		margin: 10px;
+	}
+
+	tr {
+		max-height: 80px;
+        p {
+            text-align: left;
+        }
+	}
+
+	img {
+		width: 70px;
+		height: 70px;
+	}
+
+	p {
+		margin-left: 20px;
+		margin-right: 20px;
+	}
+}
