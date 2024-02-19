@@ -25,10 +25,10 @@ $featured-height: 350px;
     }
 
     img {
+        transition: opacity 0.3s ease-in-out;
         width: 100%;
         height: $featured-height;
         object-fit: cover;
-        // margin-bottom: 10px;
     }
 
     // IMAGE CONTAINER

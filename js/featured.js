@@ -16,7 +16,7 @@ function addFeaturedItem(element, json, i) {
     container.innerHTML += `
     <div class="featuredItem">
         <div class="${side}">
-            <div class="container"><img src="${item.image}" alt="${item.imageAlt}"></div>
+            <div class="container"><img class="featured-image fade-out" src="${item.image}" alt="${item.imageAlt}"></div>
             <button onclick="loadMarkdown('main', '${item.link}.md')" class="overlay">
                 <h3 class="title">${item.title}</h3>
                 <p class="description">${item.desc}</p>

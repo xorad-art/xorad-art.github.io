@@ -24,6 +24,10 @@ function loadMarkdown(element, markdownFile) {
 
     const renderer = new marked.Renderer();
     renderer.link = function(href, title, text) {
+        if (href.startsWith('/assets/content/')) {
+            const file = href.substring(16);
+            return `<button onclick="loadMarkdown('main', '${file}')" title="${title || ''}">${text}</button>`;
+        }
         return `<a href="${href}" title="${title || ''}" target="_blank">${text}</a>`;
     };
 
