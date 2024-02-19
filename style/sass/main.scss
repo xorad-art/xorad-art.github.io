@@ -8,8 +8,8 @@ $accent-color: #ffdd55;
 $nav-height: 54px;
 $footer-height: 81px;
 
-$tablet-width: 600px;
-$desktop-width: 900px;
+$tablet-width: 768px;
+$desktop-width: 1025px;
 
 html, body {
 	height: 100%;
@@ -33,7 +33,7 @@ body {
 
 .fade-toggle {
 	opacity: 1;
-	transition: opacity 0.5s ease-in-out;
+	transition: opacity 0.3s ease-in-out;
 }
 
 .fade-out {
@@ -54,11 +54,30 @@ a {
 	}
 }
 
+// Buttons will be styled similarly
+button {
+	background: none;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+
+	text-decoration: none;
+	color: $primary-color;
+	transition: 0.2s;
+
+	&:hover {
+		color: $accent-color;
+	}
+}
+
 @import "nav";
 
-$featured-height: 400px;
+
 #main {
 	flex: 1;
+	margin-top: $nav-height;
 
 	h1 {
 		margin-top: 20px;
@@ -90,6 +109,44 @@ $featured-height: 400px;
 		}
 	}
 }
+
+.icons {
+	list-style: none;
+
+	li {
+		display: inline-block;
+	}
+
+	img {
+		filter:
+			brightness(0%)
+			invert(91%)
+			sepia(95%)
+			saturate(7467%)
+			hue-rotate(314deg)
+			brightness(105%)
+			contrast(113%);
+		height: 25px;
+		margin: 5px;
+
+		// On hover
+		&:hover {
+			filter: brightness(0%)invert(100%);
+		}
+	}
+}
+
+.closebtn {
+	font-size: large;
+	position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 5px 10px;
+    color: white;
+    border: none;
+}
+
+@import "contact-info";
 
 @import "featured";
 

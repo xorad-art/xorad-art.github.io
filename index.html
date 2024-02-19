@@ -6,32 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Xorad</title>
     <link rel="stylesheet" href="style/css/style.css">
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/10.0.0/marked.min.js" integrity="sha512-EjCqglelq9tO9KdT2iRYtcj19Q8sSXblMy+5SBfogeh5TvLwmRh9dz5l1uEwNO40/cZInZsr3jti2JCNMZJsng==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/10.0.0/marked.min.js"
+        integrity="sha512-EjCqglelq9tO9KdT2iRYtcj19Q8sSXblMy+5SBfogeh5TvLwmRh9dz5l1uEwNO40/cZInZsr3jti2JCNMZJsng=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="js/templateloader.js"></script>
+    <script src="js/featured.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/main.js"></script>
 </head>
 
 <body>
     <nav id="nav"></nav>
 
-    <div id="main">
-    </div>
+    <div id="main"></div>
 
-    <footer id="footer" class="fade-toggle">
-    </footer>
-    <script>
-        loadTemplate("nav", "templates/nav.html");
-        // If there's a fragment identifier, load it
-        // Otherwise, load the main page
-        if (window.location.hash) {
-            console.log("Loading previous content");
-            const file = decodeURIComponent(window.location.hash.substring(1));
-            loadMarkdown("main", file);
-        } else {
-            console.log("Loading main content");
-            showFeatured("main");
-        }
-        loadTemplate("footer", "templates/footer.html");
-    </script>
+    <div id="contact" class="fade-toggle fade-out hidden"></div>
+    <footer id="footer" class="fade-toggle"></footer>
 </body>
+
 </html>

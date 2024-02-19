@@ -15,7 +15,7 @@ body {
 
 .fade-toggle {
   opacity: 1;
-  transition: opacity 0.5s ease-in-out; }
+  transition: opacity 0.3s ease-in-out; }
 
 .fade-out {
   opacity: 0; }
@@ -27,12 +27,27 @@ a {
   a:hover {
     color: #ffdd55; }
 
+button {
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+  text-decoration: none;
+  color: #bcbdd0;
+  transition: 0.2s; }
+  button:hover {
+    color: #ffdd55; }
+
 nav {
+  position: fixed;
   width: 100%;
   height: 54px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  z-index: 100;
   padding: 0px;
   background-color: #2a2e3b;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5); }
@@ -55,21 +70,10 @@ nav {
     display: flex;
     justify-content: flex-end;
     align-items: center; }
-  nav button {
-    background: none;
-    border: none;
-    padding: 0;
-    font: inherit;
-    cursor: pointer;
-    outline: inherit;
-    text-decoration: none;
-    color: #bcbdd0;
-    transition: 0.2s; }
-    nav button:hover {
-      color: #ffdd55; }
 
 #main {
-  flex: 1; }
+  flex: 1;
+  margin-top: 54px; }
   #main h1 {
     margin-top: 20px;
     margin-bottom: 20px; }
@@ -90,73 +94,119 @@ nav {
     #main p a {
       text-decoration: underline; }
 
+.icons {
+  list-style: none; }
+  .icons li {
+    display: inline-block; }
+  .icons img {
+    filter: brightness(0%) invert(91%) sepia(95%) saturate(7467%) hue-rotate(314deg) brightness(105%) contrast(113%);
+    height: 25px;
+    margin: 5px; }
+    .icons img:hover {
+      filter: brightness(0%) invert(100%); }
+
+.closebtn {
+  font-size: large;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 5px 10px;
+  color: white;
+  border: none; }
+
+#contact {
+  background-color: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  top: 54px;
+  width: 90%;
+  height: 90%;
+  justify-content: center;
+  align-items: center;
+  padding: 0 5% 5% 5%; }
+  #contact #content {
+    background-color: #2a2e3b;
+    max-width: 500px;
+    margin: 0 auto;
+    margin-top: 54px;
+    border-radius: 10px;
+    padding: 5px;
+    position: relative;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5); }
+  #contact table {
+    margin: 10px; }
+  #contact tr {
+    max-height: 80px; }
+    #contact tr p {
+      text-align: left; }
+  #contact img {
+    width: 70px;
+    height: 70px; }
+  #contact p {
+    margin-left: 20px;
+    margin-right: 20px; }
+
 #featured {
-  position: relative; }
-  #featured h3 {
+  position: relative;
+  max-width: 768px;
+  margin: 0 auto; }
+  #featured .title {
     color: #ffdd55; }
-  #featured p {
+  #featured .description {
     text-align: center; }
-  #featured .left, #featured .right {
+  #featured .featuredItem {
+    overflow: hidden; }
+  #featured .left,
+  #featured .right {
     width: 100%;
-    height: 400px;
+    height: 350px;
     position: relative; }
-  #featured .container img {
+  #featured img {
     width: 100%;
-    height: 400px;
+    height: 350px;
     object-fit: cover; }
   #featured .left .container {
     float: left; }
   #featured .right .container {
     float: right; }
   #featured .container {
-    width: 80%;
     position: relative;
-    overflow: hidden; }
+    width: 80%; }
+  #featured .container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; }
   #featured .left .container::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to right, rgba(255, 255, 255, 0), #161923);
-    pointer-events: none; }
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), #161923); }
   #featured .right .container::after {
-    content: "";
+    background: linear-gradient(to left, rgba(255, 255, 255, 0), #161923); }
+  #featured .overlay {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to left, rgba(255, 255, 255, 0), #161923);
-    pointer-events: none; }
-  #featured .image-overlay {
-    position: absolute;
-    top: 200px;
+    top: 50%;
+    left: 5%;
     width: 90%;
     height: 30%;
+    box-sizing: border-box;
+    transition: transform 0.4s ease-in-out;
     background: rgba(0, 0, 0, 0.7);
-    padding: 1em; }
-  #featured .left .image-overlay {
+    z-index: 1; }
+  #featured .left .overlay {
     right: -100%;
-    box-sizing: border-box;
-    transition: transform 0.4s ease-in-out;
-    transform: translateX(100%); }
-  #featured .right .image-overlay {
+    transform: translateX(120%); }
+  #featured .right .overlay {
     right: 100%;
-    box-sizing: border-box;
-    transition: transform 0.4s ease-in-out;
-    transform: translateX(-100%); }
-  #featured .left:hover .image-overlay {
-    transform: translateX(0);
-    right: 0; }
-  #featured .right:hover .image-overlay {
-    transform: translateX(10);
-    right: 12%; }
+    transform: translateX(-120%); }
+  #featured .left:hover .overlay {
+    transform: translateX(0); }
+  #featured .right:hover .overlay {
+    transform: translateX(0); }
 
 .markdown-body {
   margin: 0 auto;
-  max-width: 900px;
+  max-width: 768px;
   padding: 30px;
   transition: 0.5s; }
   .markdown-body img {
@@ -184,33 +234,30 @@ nav {
     overflow-x: auto; }
     .markdown-body pre code {
       font-family: monospace; }
+  .markdown-body button {
+    text-decoration: underline; }
 
 footer {
   position: relative;
   clear: both;
   height: 81px;
-  margin-top: 20px;
-  margin-left: 0px;
+  margin-top: 40px;
   background-color: #2a2e3b;
   color: #737480;
   padding: 5px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
   transition: 0.5s; }
   footer .icons {
     padding-left: 0px;
     margin: 5px;
     display: flex;
-    list-style: none;
     justify-content: center;
     align-items: center; }
-    footer .icons img {
-      filter: brightness(0%) invert(91%) sepia(95%) saturate(7467%) hue-rotate(314deg) brightness(105%) contrast(113%);
-      height: 25px;
-      margin: 5px; }
   footer p {
     margin: 5px;
     font-size: small; }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 768px) {
   .logo {
     background-color: #161923; }
 
@@ -220,7 +267,7 @@ footer {
     margin-right: auto; }
     main .featured .image-overlay {
       width: 100%; } }
-@media only screen and (min-width: 900px) {
+@media only screen and (min-width: 1025px) {
   .logo {
     background-color: #2a2e3b; }
 

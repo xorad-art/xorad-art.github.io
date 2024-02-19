@@ -1,26 +1,39 @@
+$featured-height: 350px;
+
 #featured {
     position: relative;
+    max-width: $tablet-width;
+    margin: 0 auto;
 
-    h3 {
+    .title {
         color: $accent-color;
     }
-    p {
+
+    .description {
         text-align: center;
     }
 
-    .left, .right {
+    .featuredItem {
+        overflow: hidden;
+    }
+
+    .left,
+    .right {
         width: 100%;
         height: $featured-height;
         position: relative;
     }
 
-    .container img {
+    img {
         width: 100%;
         height: $featured-height;
         object-fit: cover;
         // margin-bottom: 10px;
     }
 
+    // IMAGE CONTAINER
+
+    // Positioning
     .left .container {
         float: left;
     }
@@ -30,63 +43,56 @@
     }
 
     .container {
-        width: 80%;
         position: relative;
-        overflow: hidden;
+        width: 80%;
+    }
+
+    // Effects
+    .container::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
     }
 
     .left .container::after {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
         background: linear-gradient(to right, rgba(255, 255, 255, 0), $bg-color);
-        pointer-events: none;
     }
 
     .right .container::after {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
         background: linear-gradient(to left, rgba(255, 255, 255, 0), $bg-color);
-        pointer-events: none;
     }
 
-    .image-overlay {
+    .overlay {
         position: absolute;
-        top: $featured-height - 200px;
+        top: 50%;
+        left: 5%;
         width: 90%;
         height: 30%;
+        box-sizing: border-box;
+        transition: transform 0.4s ease-in-out;
         background: rgba(0, 0, 0, 0.7);
-        padding: 1em;
+        z-index: 1;
     }
 
-    .left .image-overlay {
+    .left .overlay {
         right: -100%;
-        box-sizing: border-box;
-        transition: transform 0.4s ease-in-out;
-        transform: translateX(100%);
+        transform: translateX(120%);
     }
 
-    .right .image-overlay {
+    .right .overlay {
         right: 100%;
-        box-sizing: border-box;
-        transition: transform 0.4s ease-in-out;
-        transform: translateX(-100%);
+        transform: translateX(-120%);
     }
 
-    .left:hover .image-overlay{
+    .left:hover .overlay{
         transform: translateX(0);
-        right: 0;
     }
 
-    .right:hover .image-overlay {
-        transform: translateX(10);
-        right: 12%;
+    .right:hover .overlay {
+        transform: translateX(0);
     }
 }

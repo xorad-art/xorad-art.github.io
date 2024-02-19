@@ -1,0 +1,86 @@
+[
+    {
+        "image": "assets/media/braum.jpg",
+        "imageAlt": "League of Legends illustration",
+        "link": "art/recent",
+        "title": "Recent Ilustrations",
+        "desc": "Whenever I find time to draw"
+    },
+    {
+        "image": "assets/media/Leptos_logo_miniature.jpg",
+        "imageAlt": "Leptos logo and rust code",
+        "link": "code/this-website",
+        "title": "This Website",
+        "desc": "Made piece by piece inside the Rust Leptos Framework"
+    },
+    {
+        "image": "assets/media/escom_drawing.jpg",
+        "imageAlt": "A Drawing of my school",
+        "link": "other/working-on-a-degree",
+        "title": "Working on a Degree",
+        "desc": "Computer Systems Engineering in Mexico"
+    },
+    {
+        "image": "assets/media/9.jpg",
+        "imageAlt": "testing some stuff",
+        "link": "other/working-on-a-degree",
+        "title": "Working on a Degree",
+        "desc": "Computer Systems Engineering in Mexico"
+    },
+    {
+        "image": "assets/media/8.jpg",
+        "imageAlt": "Some of my work",
+        "link": "other/working-on-a-degree",
+        "title": "Working on a Degree",
+        "desc": "Computer Systems Engineering in Mexico"
+    },
+    {
+        "image": "assets/media/7.jpg",
+        "imageAlt": "Some of my work",
+        "link": "other/working-on-a-degree",
+        "title": "Working on a Degree",
+        "desc": "Computer Systems Engineering in Mexico"
+    },
+    {
+        "image": "assets/media/6.jpg",
+        "imageAlt": "Some of my work",
+        "link": "other/working-on-a-degree",
+        "title": "Working on a Degree",
+        "desc": "Computer Systems Engineering in Mexico"
+    },
+    {
+        "image": "assets/media/5.jpg",
+        "imageAlt": "Some of my work",
+        "link": "other/working-on-a-degree",
+        "title": "Working on a Degree",
+        "desc": "Computer Systems Engineering in Mexico"
+    },
+    {
+        "image": "assets/media/4.jpg",
+        "imageAlt": "Some of my work",
+        "link": "other/working-on-a-degree",
+        "title": "Working on a Degree",
+        "desc": "Computer Systems Engineering in Mexico"
+    },
+    {
+        "image": "assets/media/3.jpg",
+        "imageAlt": "Some of my work",
+        "link": "other/working-on-a-degree",
+        "title": "Working on a Degree",
+        "desc": "Computer Systems Engineering in Mexico"
+    },
+    {
+        "image": "assets/media/2.jpg",
+        "imageAlt": "Some of my work",
+        "link": "other/working-on-a-degree",
+        "title": "Working on a Degree",
+        "desc": "Computer Systems Engineering in Mexico"
+    },
+    {
+        "image": "assets/media/1.jpg",
+        "imageAlt": "Some of my work",
+        "link": "other/working-on-a-degree",
+        "title": "Working on a Degree",
+        "desc": "Computer Systems Engineering in Mexico"
+    }
+]
