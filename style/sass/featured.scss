@@ -2,7 +2,7 @@ $featured-height: 350px;
 
 #featured {
     position: relative;
-    max-width: $tablet-width;
+    max-width: $desktop-width;
     margin: 0 auto;
 
     .title {
@@ -94,5 +94,13 @@ $featured-height: 350px;
 
     .right:hover .overlay {
         transform: translateX(0);
+    }
+
+    // Mouseless devices won't have the hover effect
+    @media (hover: none) {
+        .left .overlay,
+        .right .overlay {
+            transform: translateX(0);
+        }
     }
 }

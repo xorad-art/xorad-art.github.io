@@ -1,7 +1,7 @@
 .markdown-body {
     margin: 0 auto;
-    max-width: $tablet-width;
-    padding: 30px;
+    max-width: $desktop-width;
+    padding: 20px;
     transition: 0.5s;
 
     img {
@@ -10,7 +10,7 @@
         margin-left: auto;
         margin-right: auto;
         max-width: 100%;
-        max-height: 40vh;
+        max-height: 400px;
     }
 
     h3 {
@@ -42,12 +42,20 @@
         overflow-x: auto;
 
         code {
-            // Make the code look like code
             font-family: monospace;
         }
     }
 
     button {
         text-decoration: underline;
+    }
+
+    blockquote {
+        border-left: 5px solid $bg-color-light;
+        margin-left: 30px;
+        margin-right: 30px;
+        p {
+            padding: 0 10px;
+        }
     }
 }

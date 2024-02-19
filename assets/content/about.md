@@ -1,4 +1,4 @@
-# This is my personal website
+# Welcome to my personal website
 
 ## About me
 
