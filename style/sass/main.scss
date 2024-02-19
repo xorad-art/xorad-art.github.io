@@ -33,7 +33,7 @@ body {
 
 .fade-toggle {
 	opacity: 1;
-	transition: opacity 0.5s ease-in-out;
+	transition: opacity 0.3s ease-in-out;
 }
 
 .fade-out {
@@ -74,7 +74,7 @@ button {
 
 @import "nav";
 
-$featured-height: 400px;
+
 #main {
 	flex: 1;
 	margin-top: $nav-height;

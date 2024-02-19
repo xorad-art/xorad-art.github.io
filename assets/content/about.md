@@ -21,7 +21,7 @@ I'm currently studying Computer Systems Engineering at the [National Polytechnic
 
 I wanted to have a place to put my **thoughts** and my **projects**.
 
-> Nowadays people have their [socials](/contact.html), but I'm retro like that, why not both?
+> Nowadays people have their <button onclick="toggleContactInfo()">socials</button>, but I'm retro like that, why not both?
 
 I also wanted to learn web development, then coded this website from scratch with no previous knowledge of web development, it's a bit rough around the edges, but not because of that I'm not proud of it.
 
@@ -35,12 +35,4 @@ Most of my notes are done in [Markdown](https://www.markdownguide.org/) anyways,
 
 ### Things to do
 
-There are still **a lot** of things to do, but, I'm working on it.
-
-- [x] Light mode is for losers, I'm not writing css for that
-- [x] Add proper quick loading of markdown html content
-- [ ] Add contact form and contact page
-- [ ] Add blog and projects navigation
-- [ ] Link social media
-- [ ] Make the tablet and desktop versions of the css
-- [ ] Add conditional CSS generation
+There are still **a lot** of things to do, but, I'm working on it. I'm planning to add a blog, and a main page with a list of my projects, but, I'm not in a hurry. For now, the bulk of the development is done, and I should focus on adding content.

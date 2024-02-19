@@ -1,5 +1,5 @@
 #contact {
-	background-color: #00000040;
+	background-color: rgba(0, 0, 0, 0.3);
 	position: fixed;
 	top: $nav-height;
     width: 90%;
@@ -16,6 +16,7 @@
         border-radius: 10px;
         padding: 5px;
 		position: relative;
+		box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
     }
 
 	table {

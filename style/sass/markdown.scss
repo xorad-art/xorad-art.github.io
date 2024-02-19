@@ -1,6 +1,6 @@
 .markdown-body {
     margin: 0 auto;
-    max-width: 900px;
+    max-width: $tablet-width;
     padding: 30px;
     transition: 0.5s;
 
@@ -45,5 +45,9 @@
             // Make the code look like code
             font-family: monospace;
         }
+    }
+
+    button {
+        text-decoration: underline;
     }
 }
