@@ -6,7 +6,7 @@ I'm **Xorad**, and I'm an illustrator based in Mexico. I'm passionate about art,
 
 ![Xorad](/assets/media/xorad.jpg)
 
-I'm currently studying Computer Systems Engineering at the [National Polytechnic Institute](https://www.ipn.mx/) at [ESCOM](https://www.escom.ipn.mx/).
+I'm currently studying Computer Systems Engineering at the [National Polytechnic Institute](https://www.ipn.mx/ "IPN on Spanish") at [ESCOM](https://www.escom.ipn.mx/ "Escuela Superior de Cómputo").
 
 > Because I get this often, my nickname is pronounced like "Shorad". My mascot is a tardigrade, I find them really cute with their unicelular eyes.
 
@@ -21,17 +21,17 @@ I'm currently studying Computer Systems Engineering at the [National Polytechnic
 
 I wanted to have a place to put my **thoughts** and my **projects**.
 
-> Nowadays people have their <button onclick="toggleContactInfo()">socials</button>, but I'm retro like that, why not both?
+> Nowadays people have their <button onclick="toggleContactInfo()" title="Here are mine">socials</button>, but I'm retro like that, why not both?
 
 I also wanted to learn web development, then coded this website from scratch with no previous knowledge of web development, it's a bit rough around the edges, but not because of that I'm not proud of it.
 
 ### How?
 
-I'm using the simplest tools when it comes to web development, so, I'm using (almost) raw HTML, CSS and JavaScript. For some quality of life, instead of writing directly in css, I'm using [Sass](https://sass-lang.com/) to make it easier to write and maintain.
+I'm using the simplest tools when it comes to web development, so, I'm using (almost) raw HTML, CSS and JavaScript. For some quality of life, instead of writing directly in css, I'm using [Sass](https://sass-lang.com/ "A life saving preprocessor") to make it easier to write and maintain.
 
-Most of my notes are done in [Markdown](https://www.markdownguide.org/) anyways, so, I'm using [Marked.js](https://marked.js.org/) to parse markdown files into HTML.
+Most of my notes are done in [Markdown](https://www.markdownguide.org/ "A guide if you want to get started") anyways, so, I'm using [Marked.js](https://marked.js.org/ "Their page") to parse markdown files into HTML.
 
-[GitHub Pages](https://pages.github.com/) has been a lifesaver for hosting this website in a simple way.
+[GitHub Pages](https://pages.github.com/ "Hosting for GitHub Repos") has been a lifesaver for hosting this website in a simple way.
 
 ### Things to do
 
