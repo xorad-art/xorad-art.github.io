@@ -44,4 +44,8 @@ document.addEventListener("DOMContentLoaded", function () {
             loadFeatured("main", json, initialFeatured);
         }
     });
+
+    window.addEventListener("scroll", checkFeaturedVisibility);
+    // Run the function once to check the initial state after a moment
+    setTimeout(checkFeaturedVisibility, 100);
 });
