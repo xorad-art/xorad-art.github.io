@@ -7,6 +7,8 @@ function loadFeatured(element, json, count) {
     for (let i = 0; i < count; i++) {
         addFeaturedItem("featured", json, i);
     }
+
+    checkFeaturedVisibility();
 }
 
 function addFeaturedItem(element, json, i) {
