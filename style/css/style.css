@@ -54,6 +54,8 @@ nav {
   padding: 0px;
   background-color: #2a2e3b;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5); }
+  nav ul {
+    padding: 0px; }
   nav li {
     margin: 0 10px; }
   nav .logo {

@@ -46,6 +46,4 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     window.addEventListener("scroll", checkFeaturedVisibility);
-    // Run the function once to check the initial state after a moment
-    setTimeout(checkFeaturedVisibility, 100);
 });
