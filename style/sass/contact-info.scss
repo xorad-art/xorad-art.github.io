@@ -11,8 +11,10 @@
     #content {
         background-color: $bg-color-light;
         max-width: 500px; // Set max width to 600px
+		max-height: 80vh;
         margin: 0 auto; // Center the div
-        margin-top: $nav-height;
+        margin-top: 5vh;
+		overflow: auto;
         border-radius: 10px;
         padding: 5px;
 		position: relative;
@@ -38,5 +40,25 @@
 	p {
 		margin-left: 20px;
 		margin-right: 20px;
+	}
+}
+
+.contact-icons {
+	list-style: none;
+
+	li {
+		display: inline-block;
+	}
+
+	img {
+		filter:
+			brightness(0%) invert(91%) sepia(95%) saturate(7467%) hue-rotate(314deg) brightness(105%) contrast(113%);
+		height: 25px;
+		margin: 5px;
+
+		// On hover
+		&:hover {
+			filter: brightness(0%)invert(100%);
+		}
 	}
 }

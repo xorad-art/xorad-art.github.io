@@ -5,11 +5,12 @@ $secondary-color: #737480;
 $text-color: #bcbdd0;
 $accent-color: #ffdd55;
 
-$nav-height: 54px;
+$nav-height: 50px;
 $footer-height: 81px;
 
 $tablet-width: 768px;
 $desktop-width: 1025px;
+$smoll-width: 410px;
 
 $markdown-width: 900px;
 
@@ -123,26 +124,6 @@ button {
 	}
 }
 
-.icons {
-	list-style: none;
-
-	li {
-		display: inline-block;
-	}
-
-	img {
-		filter:
-			brightness(0%) invert(91%) sepia(95%) saturate(7467%) hue-rotate(314deg) brightness(105%) contrast(113%);
-		height: 25px;
-		margin: 5px;
-
-		// On hover
-		&:hover {
-			filter: brightness(0%)invert(100%);
-		}
-	}
-}
-
 .closebtn {
 	font-size: large;
 	position: absolute;
@@ -151,45 +132,4 @@ button {
 	padding: 5px 10px;
 	color: white;
 	border: none;
-}
-
-// Settings for Tablet ///////////////////////////////////////////
-//////////////////////////////////////////////////////////////////
-@media only screen and (min-width: $tablet-width) {
-
-	// For testing purposes
-	.logo {
-		background-color: $bg-color;
-	}
-
-	main {
-		// margin: 0 auto;
-
-		.featured {
-			width: 80%;
-			margin-left: auto;
-			margin-right: auto;
-
-			.image-overlay {
-				width: 100%;
-			}
-		}
-	}
-}
-
-// Settings for Desktop //////////////////////////////////////////
-//////////////////////////////////////////////////////////////////
-
-@media only screen and (min-width: $desktop-width) {
-
-	// For testing purposes
-	.logo {
-		background-color: $bg-color-light;
-	}
-
-	main {
-		min-width: 720px;
-		width: 50%;
-		margin: 0 auto;
-	}
 }

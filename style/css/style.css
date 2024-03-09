@@ -14,7 +14,7 @@ body {
 nav {
   position: fixed;
   width: 100%;
-  height: 54px;
+  height: 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -23,31 +23,48 @@ nav {
   background-color: #2a2e3b;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5); }
   nav ul {
-    padding: 0px; }
-  nav li {
-    margin: 0 10px; }
-  nav .logo {
-    display: flex;
-    align-items: center;
-    margin-left: 5px; }
-    nav .logo h2 {
-      margin: 5px; }
-    nav .logo img {
-      height: 40px;
-      margin: 5px;
-      margin-right: 0px; }
-  nav .sections {
-    margin: 0px;
-    padding-right: 5px;
-    list-style: none;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center; }
+    padding: 0px;
+    overflow-x: auto; }
 
+.main-logo {
+  display: flex;
+  align-items: center;
+  margin-left: 5px; }
+  .main-logo h2 {
+    margin: 5px; }
+  .main-logo img {
+    height: 40px;
+    margin: 5px;
+    margin-right: 0px; }
+
+.nav-sections {
+  margin: 0px;
+  padding-right: 5px;
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  overflow-x: auto; }
+  .nav-sections li {
+    display: inline-block;
+    margin: 0 11px; }
+
+@media only screen and (max-width: 410px) {
+  .main-logo {
+    background-color: #161923; }
+
+  .nav-sections li {
+    margin: 0 7px; } }
+@media only screen and (min-width: 768px) {
+  .main-logo {
+    background-color: #161923; } }
+@media only screen and (min-width: 1025px) {
+  .main-logo {
+    background-color: #2a2e3b; } }
 #contact {
   background-color: rgba(0, 0, 0, 0.3);
   position: fixed;
-  top: 54px;
+  top: 50px;
   width: 90%;
   height: 90%;
   justify-content: center;
@@ -56,8 +73,10 @@ nav {
   #contact #content {
     background-color: #2a2e3b;
     max-width: 500px;
+    max-height: 80vh;
     margin: 0 auto;
-    margin-top: 54px;
+    margin-top: 5vh;
+    overflow: auto;
     border-radius: 10px;
     padding: 5px;
     position: relative;
@@ -74,6 +93,17 @@ nav {
   #contact p {
     margin-left: 20px;
     margin-right: 20px; }
+
+.contact-icons {
+  list-style: none; }
+  .contact-icons li {
+    display: inline-block; }
+  .contact-icons img {
+    filter: brightness(0%) invert(91%) sepia(95%) saturate(7467%) hue-rotate(314deg) brightness(105%) contrast(113%);
+    height: 25px;
+    margin: 5px; }
+    .contact-icons img:hover {
+      filter: brightness(0%) invert(100%); }
 
 #featured {
   position: relative;
@@ -188,7 +218,7 @@ footer {
   padding: 5px;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
   transition: 0.5s; }
-  footer .icons {
+  footer .contact-icons {
     padding-left: 0px;
     margin: 5px;
     display: flex;
@@ -247,7 +277,7 @@ button {
 
 #main {
   flex: 1;
-  margin-top: 54px; }
+  margin-top: 50px; }
   #main h1 {
     margin-top: 20px;
     margin-bottom: 20px; }
@@ -268,17 +298,6 @@ button {
     #main p a {
       text-decoration: underline; }
 
-.icons {
-  list-style: none; }
-  .icons li {
-    display: inline-block; }
-  .icons img {
-    filter: brightness(0%) invert(91%) sepia(95%) saturate(7467%) hue-rotate(314deg) brightness(105%) contrast(113%);
-    height: 25px;
-    margin: 5px; }
-    .icons img:hover {
-      filter: brightness(0%) invert(100%); }
-
 .closebtn {
   font-size: large;
   position: absolute;
@@ -287,24 +306,5 @@ button {
   padding: 5px 10px;
   color: white;
   border: none; }
-
-@media only screen and (min-width: 768px) {
-  .logo {
-    background-color: #161923; }
-
-  main .featured {
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto; }
-    main .featured .image-overlay {
-      width: 100%; } }
-@media only screen and (min-width: 1025px) {
-  .logo {
-    background-color: #2a2e3b; }
-
-  main {
-    min-width: 720px;
-    width: 50%;
-    margin: 0 auto; } }
 
 /*# sourceMappingURL=style.css.map */
