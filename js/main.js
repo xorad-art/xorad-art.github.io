@@ -1,5 +1,5 @@
-const featuredLimit = 3;
-const initialFeatured = 3;
+const FEATURED_LIMIT = 4;
+const INITIAL_FEATURED = 3;
 
 // When everything is loaded, load the header, the main content, and the footer
 document.addEventListener("DOMContentLoaded", function () {
@@ -15,17 +15,17 @@ document.addEventListener("DOMContentLoaded", function () {
         const file = decodeURIComponent(window.location.hash.substring(1));
         loadMarkdown("main", file);
     } else {
-        let loaded = 5;
+        let loaded = INITIAL_FEATURED;
 
         console.log("Loading main content");
         fetch('js/featured.json')
             .then(response => response.json())
             .then(data => {
                 json = data;
-                loadFeatured("main", data, initialFeatured);
+                loadFeatured("main", data, INITIAL_FEATURED);
                 addEventListener("scroll", function () {
-                    if (loaded < featuredLimit && (window.innerHeight + window.scrollY >= document.body.offsetHeight)) {
-                        if (featuredLimit - loaded >= 1) {
+                    if (loaded < FEATURED_LIMIT && (window.innerHeight + window.scrollY >= document.body.offsetHeight)) {
+                        if (FEATURED_LIMIT - loaded >= 1) {
                             addFeaturedItem("featured", data, loaded);
                             loaded++;
                         }
@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (file !== "") {
             loadMarkdown("main", file);
         } else {
-            loadFeatured("main", json, initialFeatured);
+            loadFeatured("main", json, INITIAL_FEATURED);
         }
     });
 

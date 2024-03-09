@@ -7,11 +7,11 @@
         "desc": "Whenever I find time to draw"
     },
     {
-        "image": "assets/media/Leptos_logo_miniature.jpg",
-        "imageAlt": "Leptos logo and rust code",
-        "link": "code/this-website",
-        "title": "This Website",
-        "desc": "Made piece by piece inside the Rust Leptos Framework"
+        "image": "assets/media/butterflyFrames.jpg",
+        "imageAlt": "Some frames drawn in a white paper",
+        "link": "art/butterflyAnimation",
+        "title": "Analog Animation",
+        "desc": "A small animation made with paper and watercolors"
     },
     {
         "image": "assets/media/escom_drawing.jpg",
@@ -21,11 +21,11 @@
         "desc": "Computer Systems Engineering in Mexico"
     },
     {
-        "image": "assets/media/9.jpg",
-        "imageAlt": "testing some stuff",
-        "link": "other/working-on-a-degree",
-        "title": "Working on a Degree",
-        "desc": "Computer Systems Engineering in Mexico"
+        "image": "assets/media/Leptos_logo_miniature.jpg",
+        "imageAlt": "Leptos logo and rust code",
+        "link": "code/this-website",
+        "title": "This Website",
+        "desc": "I thought I would make this with Leptos"
     },
     {
         "image": "assets/media/8.jpg",
