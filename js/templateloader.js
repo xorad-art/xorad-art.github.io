@@ -16,20 +16,12 @@ function loadTemplate(element, templateFile) {
 // Loads the contents of a markdown file into the given element
 function loadMarkdown(element, markdownFile) {
     const container = document.getElementById(element);
-    const contact = document.getElementById("contact");
     window.location.hash = encodeURIComponent(markdownFile);
 
     // Hide the contact info if it's visible
     hideContactInfo();
 
-    const renderer = new marked.Renderer();
-    renderer.link = function(href, title, text) {
-        if (href.startsWith('/assets/content/')) {
-            const file = href.substring(16);
-            return `<button onclick="loadMarkdown('main', '${file}')" title="${title || ''}">${text}</button>`;
-        }
-        return `<a href="${href}" title="${title || ''}" target="_blank">${text}</a>`;
-    };
+    const renderer = makeCustomRenderer();
 
     window.scrollTo(0, 0);
 
@@ -61,4 +53,35 @@ function loadMarkdown(element, markdownFile) {
                     console.error(`Error loading ${markdownFile} to ${element}:`, error);
                 }
             });
+}
+
+function makeCustomRenderer() {
+    const renderer = new marked.Renderer();
+    renderer.link = function(href, title, text) {
+        if (href.startsWith('/assets/content/')) {
+            const file = href.substring(16);
+            return `<button onclick="loadMarkdown('main', '${file}')" title="${title || ''}">${text}</button>`;
+        }
+        return `<a href="${href}" title="${title || ''}" target="_blank">${text}</a>`;
+    };
+
+    renderer.image = function(href, title, text) {
+        // If it's a youtube video, embed it
+        if (href.startsWith('https://youtu.be') || href.startsWith('https://www.youtube.com')) {
+            let parts = href.split('/');
+            let videoId = parts[parts.length - 1];
+            return `<iframe class="yt" src="https://www.youtube.com/embed/${videoId}" title="${title || ''}" allow="accelerometer" frameborder="0" allowfullscreen></iframe>`
+        }
+        return `<img src="${href}" alt="${text}" title="${title || ''}">`;
+    };
+
+    renderer.heading = function(text, level) {
+        // const escapedText = text.toLowerCase().replace(/[^\w]+/g, '-');
+        if (level === 1) {
+            document.title = 'Xorad - ' + text;
+        }
+        return `<h${level}>${text}</h${level}>`;
+    }
+
+    return renderer;
 }

@@ -9,7 +9,7 @@
 
 For some reason I decided to draw on Microsoft Paint. I saw some cool art on it and downloaded an old Windows XP version of it.
 
-<iframe class="yt" src="https://www.youtube.com/embed/-NypF308oaQ" frameborder="0" allowfullscreen></iframe>
+![video](https://youtu.be/-NypF308oaQ)
 
 ## February 2024
 
@@ -20,4 +20,3 @@ I drew a lot of character for a visual novel project I joined. It has been a lot
 ![Cast of the VN](/assets/media/spirasWWCCast.webp)
 
 Let's see if we can make something cool out of it.
-
