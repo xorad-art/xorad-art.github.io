@@ -31,6 +31,8 @@ function loadMarkdown(element, markdownFile) {
         return `<a href="${href}" title="${title || ''}" target="_blank">${text}</a>`;
     };
 
+    window.scrollTo(0, 0);
+
     fetch(CONTENT_FOLDER + markdownFile)
             .then(response => {
                 if (response.status === 404) {
