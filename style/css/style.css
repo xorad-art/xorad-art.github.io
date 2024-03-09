@@ -31,11 +31,11 @@ nav {
   align-items: center;
   margin-left: 5px; }
   .main-logo h2 {
-    margin: 5px; }
+    margin: 5px;
+    margin-left: 0; }
   .main-logo img {
     height: 40px;
-    margin: 5px;
-    margin-right: 0px; }
+    margin: 5px; }
 
 .nav-sections {
   margin: 0px;
@@ -50,11 +50,8 @@ nav {
     margin: 0 11px; }
 
 @media only screen and (max-width: 410px) {
-  .main-logo {
-    background-color: #161923; }
-
-  .nav-sections li {
-    margin: 0 7px; } }
+  .main-logo h2 {
+    display: none; } }
 @media only screen and (min-width: 768px) {
   .main-logo {
     background-color: #161923; } }

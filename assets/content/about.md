@@ -21,6 +21,7 @@ I'm currently studying Computer Systems Engineering at the [National Polytechnic
 
 I wanted to have a place to put my **thoughts** and my **projects**.
 
+<!-- I'm not getting rid of this warning for inline html, not worth it -->
 > Nowadays people have their <button onclick="toggleContactInfo()" title="Here are mine">socials</button>, but I'm retro like that, why not both?
 
 I also wanted to learn web development, then coded this website from scratch with no previous knowledge of web development, it's a bit rough around the edges, but not because of that I'm not proud of it.
@@ -36,3 +37,9 @@ Most of my notes are done in [Markdown](https://www.markdownguide.org/ "A guide 
 ### Things to do
 
 There are still **a lot** of things to do, but, I'm working on it. I'm planning to add a blog, and a main page with a list of my projects, but, I'm not in a hurry. For now, the bulk of the development is done, and I should focus on adding content.
+
+- [x] Add a contact widget
+- [ ] Add a project Page
+- [ ] Add a blog Page
+- [ ] Fix the missing links for mail and Patreon
+- [ ] Add a carousel for reading my webcomics here

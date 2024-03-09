@@ -1,7 +1,7 @@
 # Recent Art
 
 > This one isn't recent, but I like it. I drew it.
-![Astronaut Cat](/assets/media/Astronauta.jpg)
+![Astronaut Cat](/assets/media/Astronauta.jpg "Astronauta - Ink on paper, Jan 2018")
 
 ## March 2024
 

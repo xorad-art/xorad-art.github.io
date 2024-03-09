@@ -26,11 +26,11 @@ nav {
 
 	h2 {
 		margin: 5px;
+		margin-left: 0;
 	}
 	img {
 		height: 40px;
 		margin: 5px;
-		margin-right: 0px;
 	}
 }
 
@@ -51,19 +51,14 @@ nav {
 }
 
 @media only screen and (max-width: $smoll-width) {
-	// For testing purposes
 	.main-logo {
-		background-color: $bg-color;
+		h2 {
+			display: none;
+		}
 	}
-
-	.nav-sections li {
-			margin: 0 7px;
-	}
-
 }
 
 @media only screen and (min-width: $tablet-width) {
-
 	// For testing purposes
 	.main-logo {
 		background-color: $bg-color;
@@ -71,7 +66,6 @@ nav {
 }
 
 @media only screen and (min-width: $desktop-width) {
-
 	// For testing purposes
 	.main-logo {
 		background-color: $bg-color-light;
