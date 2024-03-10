@@ -1,3 +1,17 @@
+// Function to handle scroll events
+function checkFeaturedVisibility() {
+    if (window.location.hash === "") {
+        const images = document.querySelectorAll('.featured-image');
+
+        images.forEach(image => {
+            if (isInViewport(image)) {
+                image.classList.remove('fade-out');
+                image.classList.add('fade-in');
+            }
+        })
+    }
+}
+
 function loadFeatured(element, json, count) {
     const container = document.getElementById(element);
     let string = `<p class="description">Illustrator, sometimes developer, occasionally clever</p>
@@ -26,3 +40,4 @@ function addFeaturedItem(element, json, i) {
         </div>
     </div>`;
 }
+

@@ -1,4 +1,4 @@
-const FEATURED_LIMIT = 4;
+const FEATURED_LIMIT = 5;
 const INITIAL_FEATURED = 3;
 
 // When everything is loaded, load the header, the main content, and the footer
@@ -24,11 +24,13 @@ document.addEventListener("DOMContentLoaded", function () {
                 json = data;
                 loadFeatured("main", data, INITIAL_FEATURED);
                 addEventListener("scroll", function () {
-                    if (loaded < FEATURED_LIMIT && (window.innerHeight + window.scrollY >= document.body.offsetHeight)) {
-                        if (FEATURED_LIMIT - loaded >= 1) {
-                            addFeaturedItem("featured", data, loaded);
-                            loaded++;
-                        }
+                    let isMainPage = window.location.hash === "";
+                    if (isMainPage &&
+                        loaded < FEATURED_LIMIT &&
+                        (window.innerHeight + window.scrollY >= document.body.offsetHeight)
+                    ) {
+                        addFeaturedItem("featured", data, loaded);
+                        loaded++;
                     }
                 });
             })

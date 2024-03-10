@@ -51,15 +51,3 @@ function isInViewport(element) {
         rect.bottom >= 0
     );
 }
-
-// Function to handle scroll events
-function checkFeaturedVisibility() {
-    const images = document.querySelectorAll('.featured-image');
-
-    images.forEach(image => {
-        if (isInViewport(image)) {
-            image.classList.remove('fade-out');
-            image.classList.add('fade-in');
-        }
-    })
-}
