@@ -14,16 +14,23 @@
         "desc": "A small animation made with paper and watercolors"
     },
     {
+        "image": "assets/media/notebookjp.webp",
+        "imageAlt": "A notebook filled with hiragana",
+        "link": "other/learningJapaneseOneYear",
+        "title": "Learning Japanese",
+        "desc": "One year of learning Japanese"
+    },
+    {
         "image": "assets/media/escom_drawing.jpg",
         "imageAlt": "A Drawing of my school",
-        "link": "other/working-on-a-degree",
+        "link": "other/workingOnADegree",
         "title": "Working on a Degree",
         "desc": "Computer Systems Engineering in Mexico"
     },
     {
         "image": "assets/media/Leptos_logo_miniature.jpg",
         "imageAlt": "Leptos logo and rust code",
-        "link": "code/this-website",
+        "link": "code/thisWebsite",
         "title": "This Website",
         "desc": "I thought I would make this with Leptos"
     },

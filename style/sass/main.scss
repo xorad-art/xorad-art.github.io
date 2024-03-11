@@ -5,13 +5,17 @@ $secondary-color: #737480;
 $text-color: #bcbdd0;
 $accent-color: #ffdd55;
 
-$nav-height: 54px;
+$nav-height: 50px;
 $footer-height: 81px;
 
 $tablet-width: 768px;
 $desktop-width: 1025px;
+$smoll-width: 410px;
 
-html, body {
+$markdown-width: 900px;
+
+html,
+body {
 	height: 100%;
 }
 
@@ -23,8 +27,15 @@ body {
 	color: $text-color;
 
 	display: flex;
-    flex-direction: column;
+	flex-direction: column;
 }
+
+@import "nav";
+@import "contact-info";
+@import "featured";
+@import "markdown";
+@import "footer";
+@import "other";
 
 // Hidden attribute
 .hidden {
@@ -76,9 +87,6 @@ button {
 	}
 }
 
-@import "nav";
-
-
 #main {
 	flex: 1;
 	margin-top: $nav-height;
@@ -89,6 +97,7 @@ button {
 		// padding: 20 0 0 20px;
 		// color: white;
 	}
+
 	.description {
 		padding: 0;
 		margin: 10px;
@@ -108,34 +117,9 @@ button {
 		text-align: left;
 		// max-width: 700px;
 		line-height: 1.5em;
+
 		a {
 			text-decoration: underline;
-		}
-	}
-}
-
-.icons {
-	list-style: none;
-
-	li {
-		display: inline-block;
-	}
-
-	img {
-		filter:
-			brightness(0%)
-			invert(91%)
-			sepia(95%)
-			saturate(7467%)
-			hue-rotate(314deg)
-			brightness(105%)
-			contrast(113%);
-		height: 25px;
-		margin: 5px;
-
-		// On hover
-		&:hover {
-			filter: brightness(0%)invert(100%);
 		}
 	}
 }
@@ -143,55 +127,9 @@ button {
 .closebtn {
 	font-size: large;
 	position: absolute;
-    top: 10px;
-    right: 10px;
-    padding: 5px 10px;
-    color: white;
-    border: none;
-}
-
-@import "contact-info";
-
-@import "featured";
-
-@import "markdown";
-
-@import "footer";
-
-
-// Settings for Tablet ///////////////////////////////////////////
-//////////////////////////////////////////////////////////////////
-@media only screen and (min-width: $tablet-width) {
-	// For testing purposes
-	.logo {
-		background-color: $bg-color;
-	}
-	main {
-		// margin: 0 auto;
-
-		.featured {
-			width: 80%;
-			margin-left: auto;
-			margin-right: auto;
-			.image-overlay {
-				width: 100%;
-			}
-		}
-	}
-}
-
-// Settings for Desktop //////////////////////////////////////////
-//////////////////////////////////////////////////////////////////
-
-@media only screen and (min-width: $desktop-width) {
-	// For testing purposes
-	.logo {
-		background-color: $bg-color-light;
-	}
-
-	main {
-		min-width: 720px;
-		width: 50%;
-		margin: 0 auto;
-	}
+	top: 10px;
+	right: 10px;
+	padding: 5px 10px;
+	color: white;
+	border: none;
 }

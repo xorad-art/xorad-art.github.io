@@ -14,36 +14,60 @@ nav {
 
 	ul {
 		padding: 0px;
+		overflow-x: auto;
 	}
+}
+
+// Logo and title
+.main-logo {
+	display: flex;
+	align-items: center;
+	margin-left: 5px;
+
+	h2 {
+		margin: 5px;
+		margin-left: 0;
+	}
+	img {
+		height: 40px;
+		margin: 5px;
+	}
+}
+
+// Navigation
+.nav-sections {
+	margin: 0px;
+	padding-right: 5px;
+	list-style: none;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	overflow-x: auto;
 
 	li {
-		margin: 0 10px;
+		display: inline-block;
+		margin: 0 11px;
 	}
+}
 
-	// Logo and title
-	.logo {
-		display: flex;
-		align-items: center;
-		margin-left: 5px;
-
+@media only screen and (max-width: $smoll-width) {
+	.main-logo {
 		h2 {
-			margin: 5px;
-		}
-		img {
-			height: 40px;
-			margin: 5px;
-			margin-right: 0px;
+			display: none;
 		}
 	}
+}
 
-	// Navigation links
-	.sections {
-		margin: 0px;
-		// padding: 0 5 0px;
-		padding-right: 5px;
-		list-style: none;
-		display: flex;
-		justify-content: flex-end;
-		align-items: center;
+@media only screen and (min-width: $tablet-width) {
+	// For testing purposes
+	.main-logo {
+		background-color: $bg-color;
+	}
+}
+
+@media only screen and (min-width: $desktop-width) {
+	// For testing purposes
+	.main-logo {
+		background-color: $bg-color-light;
 	}
 }
