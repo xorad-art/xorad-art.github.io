@@ -1,6 +1,6 @@
 # Terms of Service (ToS) for Commissioned Artwork
 
-These Terms of Service (ToS) govern the relationship between myself, Xorad, and any individual or entity seeking to commission artwork (ie). By engaging by my services, the Client agrees to abide by these terms.
+These Terms of Service (ToS) govern the relationship between myself, Xorad, and any individual or entity seeking to commission artwork (i.e. the Client). By engaging by my services, the Client agrees to abide by these terms.
 
 ## 1. Payment
 
