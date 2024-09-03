@@ -1,4 +1,4 @@
-const CONTENT_FOLDER = "assets/content/";
+const CONTENT_FOLDER = "content/";
 
 // Loads html from the given file and modifies the element content
 // with the template.
@@ -60,11 +60,28 @@ function loadMarkdown(element, markdownFile) {
 function makeCustomRenderer() {
     const renderer = new marked.Renderer();
     renderer.link = function (href, title, text) {
-        if (href.startsWith('/assets/content/')) {
-            const file = href.substring(16);
-            return `<button onclick="loadMarkdown('main', '${file}')" title="${title || ''}">${text}</button>`;
+        var result = ``;
+        const isAbsoluteURL = /^(https?:\/\/|\/\/)/i.test(href);
+        if (isAbsoluteURL) {
+            result = `<a href="${href}" title="${title || ''}" target="_blank">${text}</a>`;
         }
-        return `<a href="${href}" title="${title || ''}" target="_blank">${text}</a>`;
+        else if (href.endsWith('.md')) {
+            result = `<button onclick="loadMarkdown('main', '${href}')" title="${title || ''}">${text}</button>`;
+        }
+        else if (href.endsWith('/')) {
+            // This is then a folder of images, so a reader a is loaded
+            // Along with their scripts if they haven't already
+            if (typeof currentSlide === 'undefined') {
+                loadScript('js/reader.js');
+            } else {
+                currentSlide = 0;
+            }
+            result = generateCarousel(href, title);
+        }
+        else {
+            console.error(`Link contains unrecognized pattern: ${href}`)
+        }
+        return result;
     };
 
     renderer.image = function (href, title, text) {
@@ -86,4 +103,45 @@ function makeCustomRenderer() {
     }
 
     return renderer;
+}
+
+function generateCarousel(folder, info) {
+    console.log(`Generating carousel with folder ${folder} and info: ${info}`);
+    if (info == '') {
+        console.error(`Generating a Carousel failed,
+        requires information for page count and fileformat, example:
+        '[text](/folder/ "5,webp")'`);
+        return "Error";
+    }
+    const parts = info.split(',');
+    if (parts.length != 2) {
+        console.error(`Generating a Carousel failed,
+        Incorrect format for page count and fileformat, example:
+        '[text](/folder/ "5,webp")'`);
+        return "Error";
+    }
+    let pages = parseInt(parts[0],10);
+    let fileformat = parts[1];
+    var result = '';
+
+    result += `<div class="reader">
+        <div class="carousel-header">
+            <button class="btn-start" onclick="goToStart()" disabled><<</button>
+            <button class="alt-prev" onclick="changeSlide(-1)" disabled><</button>
+            <span class="page-count"></span>
+            <button class="alt-next" onclick="changeSlide(1)" disabled>></button>
+            <button class="btn-end" onclick="goToEnd()" disabled>>></button>
+        </div>
+        <div class="carousel">
+            <div class="carousel-images">`;
+
+    for (let i = 0; i < pages; i++) {
+        result += `<img src="${folder}/p${i}.${fileformat}" alt="Page ${i + 1}" class="carousel-image"></img>`;
+    }
+    result += `</div>
+            <button class="prev" onclick="changeSlide(-1)"></button>
+            <button class="next" onclick="changeSlide(1)"></button>
+        </div>
+    </div>`;
+    return result;
 }

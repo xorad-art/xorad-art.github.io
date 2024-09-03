@@ -4,7 +4,7 @@
 
 I'm **Xorad**, and I'm an illustrator based in Mexico. I'm passionate about art, coding and sometimes *whatever* my mind decides. I like to come up with things like this website or, just draw people and landscapes.
 
-![Xorad](/assets/media/xorad.jpg)
+![Xorad](/media/xorad.jpg)
 
 I'm currently studying Computer Systems Engineering at the [National Polytechnic Institute](https://www.ipn.mx/ "IPN on Spanish") at [ESCOM](https://www.escom.ipn.mx/ "Escuela Superior de Cómputo").
 
@@ -42,4 +42,4 @@ There are still **a lot** of things to do, but, I'm working on it. I'm planning 
 - [ ] Add a project Page
 - [ ] Add a blog Page
 - [ ] Fix the missing links for mail and Patreon
-- [ ] Add a carousel for reading my webcomics here
+- [x] Add a carousel for reading my webcomics here

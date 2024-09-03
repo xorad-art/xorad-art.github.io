@@ -4,7 +4,7 @@
 
 Linguistics has always been a subject interesting to me, I'm a native Spanish speaker, and with a horrid initial introduction to English, my troubles with that language inside a classroom became a motivation to learn on my own.
 
-![notebook](/assets/media/notebookjp.webp)
+![notebook](/media/notebookjp.webp)
 
 I've always been interested in learning Japanese, but, I never had good ways to overcome some of the initial barriers of learning it. Some friends of mine got stuck memorizing ひらがな (hiragana) or カタカナ (katakana), most of the time, they would give up after a few weeks, or just permanently stuck with 漢字 (kanji).
 
@@ -14,7 +14,7 @@ Reading is a big barrier for Japanese and Chinese with the thousands of characte
 
 Language learning needs no justification, but I've always been interested in Japanese culture, sometimes being foreign enough for things to have no direct translation, and other being similar enough to be relatable. One of my main hobbies is reading comics, but most DC and Marvel comics are not my thing, they felt impersonal. The way a lot of manga is written and drawn just **gets me**. That became a good enough excuse to study properly.
 
-![A picture from Berserk](/assets/media/berserk_364.webp)
+![A picture from Berserk](/media/berserk_364.webp)
 
 > I mean, look at Berserk. It's a masterpiece.
 
@@ -26,9 +26,9 @@ I've been on and off learning Japanese for a while because of my [weaboo *inclin
 
 Thanks to an uncle that holds a shelf of language learning books, he lent me the [Complete edition](https://www.goodreads.com/book/show/11326669-living-language-japanese-complete-edition) for [**Living language**'s](https://en.wikipedia.org/wiki/Living_Language) japanese books. I've been unable to find pirated pdfs of them, the company **doesn't even have a website anymore**, they've been bought by another company and now redirect to an english tutoring website I don't care about.
 
-![Books](/assets/media/livinglanguagebooks.webp)
+![Books](/media/livinglanguagebooks.webp)
 
-I could omit trying to get through difficult moments with other books like [Genki's](https://genki.japantimes.co.jp/index_en "A popular Japanese learning book") *"ask a classmate"* moments
+With those, I could omit trying to get through difficult things with other books like [Genki's](https://genki.japantimes.co.jp/index_en "A popular Japanese learning book") *"ask a classmate"* moments
 
 > I don't have classmates, I'm sitting on the metro, and the people around me won't respond to a 「はじめましてショラッドです、ちんちは小さいです」.
 
@@ -57,9 +57,9 @@ But **who cares about those**; If I had to warn you about some sites and tools t
 
 I spend an hour and a half each day commuting to college, about the same going back home, with a 20 and a 30 minute stretches of time calm enough to read.
 
-After about a week familiarizing with 仮名 (Kana, hiragana and katakana), I started with the grammar books and the kanji app. The first of books from living language is entirely in hiragana, the followings have kanji without furigana, so Kanji Study felt rewarding.
+After about a week familiarizing with 仮名 (Kana, i.e. hiragana and katakana), I started with the grammar books and the kanji app. The first of books from living language is entirely in hiragana, the followings have kanji without furigana, so Kanji Study felt rewarding.
 
-![Screenshot](/assets/media/kanjistudy.webp)
+![Screenshot](/media/kanjistudy.webp)
 
 > It was interesting to learn, but also a bit of a chore. After some time of the habit, it became just another part of my day. Something I did when sitting on the metro.
 
@@ -90,6 +90,6 @@ I'll keep learning it even if not as intensively studying because I feel like I 
 
 > I'm sure I'll keep learning. Also, 葬送のフリーレン (Sousou no Frieren) is being such a great read.
 
-![Screenshot](/assets/media/sousounofrierenScreenshot.webp)
+![Screenshot](/media/sousounofrierenScreenshot.webp)
 
 > Xorad, 2024/02/19

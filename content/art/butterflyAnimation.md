@@ -6,7 +6,7 @@ A random day during the pandemic I wanted to do something different. Some inspir
 
 I recently found the original paper with the butterfly drawings in a random folder (a literal folder, not a computer folder) and I thought it would be a good idea to write about it.
 
-![Butterfly Frames](/assets/media/butterflyFrames.jpg)
+![Butterfly Frames](/media/butterflyFrames.jpg)
 
 ## Process
 
@@ -16,11 +16,11 @@ I slowly [rotoscoped](https://en.wikipedia.org/wiki/Rotoscoping "Tracing over a 
 
 > Here's an artistic recreation of the process:
 >
-> ![Butterfly Rotoscope](/assets/media/butterflyRotoscoping.jpg)
+> ![Butterfly Rotoscope](/media/butterflyRotoscoping.jpg)
 >
 > After that you can just add **details**.
 >
-> ![Butterfly Details](/assets/media/butterflyDetailing.jpg)
+> ![Butterfly Details](/media/butterflyDetailing.jpg)
 
 ### Anyways
 
@@ -28,7 +28,7 @@ I used a pen to ink the outlines, after that dried, I painted the butterfly with
 
 I had to pile some books and notebooks to support my phone in a repeatable distance above the page, with that I took pictures of each frame, about 60.
 
-![Butterfly Closeup](/assets/media/butterflyCloseup.jpg)
+![Butterfly Closeup](/media/butterflyCloseup.jpg)
 
 I used [Krita](https://krita.org/en/ "A free and open source painting program") to edit the few differences on lighting, and to align the frames. At the time krita didn't have the best tools for this but I didn't need much anyway.
 
@@ -36,7 +36,7 @@ I used [Krita](https://krita.org/en/ "A free and open source painting program") 
 
 I'm really proud that it loops seamlessly. Here's the gif:
 
-![Butterfly Animation](/assets/media/butterflyAnimation.gif)
+![Butterfly Animation](/media/butterflyAnimation.gif)
 
 ### Like a week later
 
@@ -44,7 +44,7 @@ My sister was bored accompanying me in the living room, I asked her to draw me a
 
 > I have no idea where the original drawings of this one are, but I have the gif.
 
-![Cat Animation](/assets/media/gato.gif)
+![Cat Animation](/media/gato.gif)
 
 I doubt she knows I still have this. According to the metadata of the files, we did this all on August 2020.
 

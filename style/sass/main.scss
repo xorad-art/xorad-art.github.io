@@ -33,6 +33,7 @@ body {
 @import "nav";
 @import "contact-info";
 @import "featured";
+@import "reader";
 @import "markdown";
 @import "footer";
 @import "other";
@@ -84,6 +85,10 @@ button {
 
 	&:hover {
 		color: $accent-color;
+	}
+	&:disabled:hover {
+		color: $text-color;
+		cursor: default;
 	}
 }
 

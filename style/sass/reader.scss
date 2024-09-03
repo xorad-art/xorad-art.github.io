@@ -1,0 +1,95 @@
+.reader {
+    width: calc(100% + 40px);
+    margin-left: -20px;
+    margin-right: -20px;
+}
+
+.carousel-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+
+    button {
+        margin: 0 10px;
+        padding: 5px 10px;
+        background-color: $bg-color-light;
+        color: $text-color;
+        border: none;
+        cursor: pointer;
+        border-radius: 4px;
+        text-decoration: none !important;
+
+        &:disabled {
+            background-color: $bg-color;
+            cursor: pointer;
+        }
+    }
+}
+
+.page-count {
+    align-content: center;
+    // margin-right: auto;
+    // font-size: 16px;
+    // font-weight: bold;
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border: 2px solid $primary-color;
+    border-radius: 10px;
+    background-color: $bg-color-light;
+}
+
+.carousel-images {
+    display: flex;
+    transition: transform 0.3s ease;
+}
+
+.carousel-image {
+    min-width: 100%;
+    max-width: 100%;
+    max-height: max-content !important;
+    height: auto;
+    flex-shrink: 0;
+    object-fit: contain;
+}
+
+button.prev,
+button.next {
+    position: absolute;
+    top: 0;
+    width: 10%;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    z-index: 1;
+}
+
+button.prev {
+    left: 0px;
+}
+
+button.next {
+    right: 0px;
+}
+
+button.prev:hover,
+button.next:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Mobile styles */
+@media only screen and (min-width: $tablet-width) {
+    button.prev,
+    button.next {
+        width: 50%;
+        cursor: pointer;
+    }
+    button.prev:hover,
+    button.next:hover {
+        background-color: rgba(0, 0, 0, 0);
+    }
+}

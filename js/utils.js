@@ -51,3 +51,16 @@ function isInViewport(element) {
         rect.bottom >= 0
     );
 }
+
+function loadScript(src) {
+    const script = document.createElement('script');
+    script.src = src; // Path to the JavaScript file you want to load
+    script.type = 'text/javascript';
+    script.onload = function() {
+        console.log(`${src} loaded successfully.`);
+    };
+    script.onerror = function() {
+        console.error(`Failed to load ${src}.`);
+    };
+    document.head.appendChild(script);
+}
