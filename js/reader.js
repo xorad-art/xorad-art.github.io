@@ -124,3 +124,31 @@ function endDrag(event) {
         carousel.style.transform = `translateX(${-currentSlide * 100}%)`;
     }
 }
+
+function toggleFit() {
+    const carouselContainer = document.querySelector('.reader');
+    carouselContainer.classList.toggle('fit-screen');
+
+    // Optionally, change the button text based on the state
+    const toggleButton = document.getElementById('toggle-fit');
+    if (carouselContainer.classList.contains('fit-screen')) {
+        toggleButton.textContent = 'Exit';
+        document.addEventListener('keydown', handleEscKey);
+    } else {
+        const img = document.createElement('img');
+        img.src = '/assets/resize-icon.svg';
+        img.alt = 'Fit on screen';
+        toggleButton.textContent = '';
+        toggleButton.appendChild(img);
+        document.removeEventListener('keydown', handleEscKey);
+    }
+}
+
+function handleEscKey(event) {
+    if (event.key === 'Escape') {
+        const carouselContainer = document.querySelector('.reader');
+        if (carouselContainer.classList.contains('fit-screen')) {
+            toggleFit(); // Exit fit-screen mode
+        }
+    }
+}

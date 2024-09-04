@@ -131,6 +131,7 @@ function generateCarousel(folder, info) {
             <span class="page-count"></span>
             <button class="alt-next" onclick="changeSlide(1)" disabled>></button>
             <button class="btn-end" onclick="goToEnd()" disabled>>></button>
+            <button id="toggle-fit" onclick="toggleFit()"><img src="/assets/resize-icon.svg" alt="Fit on screen"></img></button>
         </div>
         <div class="carousel">
             <div class="carousel-images">`;
