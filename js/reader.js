@@ -31,17 +31,17 @@ function checkForReader() {
     }
 }
 
-// Create a MutationObserver to monitor changes in the #main element
-const observer = new MutationObserver(() => {
+// Create a MutationObserver to monitor changes in the #main element once every 200ms
+// This NEEDS to be debounced because otherwise Firefox will trigger it infinitely.
+const observer = new MutationObserver(debounce(() => {
     checkForReader();
-});
+}, 200));
 
 const mainElement = document.getElementById('main');
 if (mainElement) {
+    checkForReader();
     observer.observe(mainElement, { childList: true, subtree: true });
 }
-
-checkForReader();
 
 function changeSlide(direction) {
     const slides = document.querySelectorAll('.carousel-image');
