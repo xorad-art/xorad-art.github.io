@@ -1,7 +1,12 @@
+.reader-container {
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
 .reader {
-    width: calc(100% + 40px);
-    margin-left: -20px;
-    margin-right: -20px;
+    max-height: 100%;
+    overflow: hidden;
+    width: auto;
 }
 
 .carousel-header {
@@ -29,25 +34,19 @@
 }
 
 .fit-screen {
-    width: fit-content;  /* Full viewport width */
+    width: 100vw;
     height: 100vh; /* Full viewport height */
     position: fixed;
     top: 0;
     left: 0;
     z-index: 9999; /* Ensure it stays on top */
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.6);
     margin-left: 0px;
     margin-right: 0px;
     padding-top: 10px;
 
     .carousel-images img {
-        object-fit: contain;
-        width: auto;
-        height: 95vh !important;
-    }
-
-    .carousel {
-        width: auto;
+        max-height: calc(100vh - 14pt - 34px) !important;
     }
 }
 
@@ -68,7 +67,7 @@
 
 .carousel {
     position: relative;
-    width: 100%;
+    width: auto;
     overflow: hidden;
     border: 2px solid $primary-color;
     border-radius: 10px;
@@ -78,21 +77,19 @@
 .carousel-images {
     display: flex;
     transition: transform 0.3s ease;
+
+    img {
+        max-height: max-content !important;
+    }
 }
 
-.carousel-images img {
+.markdown-body .carousel-images img {
     object-fit: contain; /* Ensure images fit within the container while maintaining aspect ratio */
-    width: 100%;
-    height: 100%;
-}
-
-.carousel-image {
+    width: auto;
+    height: auto;
     min-width: 100%;
     max-width: 100%;
-    max-height: max-content !important;
-    height: auto;
     flex-shrink: 0;
-    object-fit: contain;
 }
 
 button.prev,

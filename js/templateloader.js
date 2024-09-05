@@ -124,7 +124,8 @@ function generateCarousel(folder, info) {
     let fileformat = parts[1];
     var result = '';
 
-    result += `<div class="reader">
+    result += `<div class="reader-container">
+    <div class="reader">
         <div class="carousel-header">
             <button class="btn-start" onclick="goToStart()" disabled><<</button>
             <button class="alt-prev" onclick="changeSlide(-1)" disabled><</button>
@@ -142,6 +143,7 @@ function generateCarousel(folder, info) {
     result += `</div>
             <button class="prev" onclick="changeSlide(-1)"></button>
             <button class="next" onclick="changeSlide(1)"></button>
+        </div>
         </div>
     </div>`;
     return result;

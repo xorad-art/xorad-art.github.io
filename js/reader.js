@@ -126,13 +126,13 @@ function endDrag(event) {
 }
 
 function toggleFit() {
-    const carouselContainer = document.querySelector('.reader');
+    const carouselContainer = document.querySelector('.reader-container');
     carouselContainer.classList.toggle('fit-screen');
 
     // Optionally, change the button text based on the state
     const toggleButton = document.getElementById('toggle-fit');
     if (carouselContainer.classList.contains('fit-screen')) {
-        toggleButton.textContent = 'Exit';
+        toggleButton.innerHTML = '&times;';
         document.addEventListener('keydown', handleEscKey);
     } else {
         const img = document.createElement('img');
@@ -146,7 +146,7 @@ function toggleFit() {
 
 function handleEscKey(event) {
     if (event.key === 'Escape') {
-        const carouselContainer = document.querySelector('.reader');
+        const carouselContainer = document.querySelector('.reader-container');
         if (carouselContainer.classList.contains('fit-screen')) {
             toggleFit(); // Exit fit-screen mode
         }
