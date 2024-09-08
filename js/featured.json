@@ -1,5 +1,12 @@
 [
     {
+        "image": "media/Erwin/Erwin-front.webp",
+        "imageAlt": "Yawning Opossum Drawing",
+        "link": "other/caringForAnOpossum",
+        "title": "Erwin the opossum",
+        "desc": "A rescued opossum, now living with me"
+    },
+    {
         "image": "media/braum.jpg",
         "imageAlt": "League of Legends illustration",
         "link": "art/recent",
@@ -7,7 +14,7 @@
         "desc": "Whenever I find time to draw"
     },
     {
-        "image": "media/butterflyFrames.jpg",
+        "image": "media/butterflyAnimation/butterflyFrames.jpg",
         "imageAlt": "Some frames drawn in a white paper",
         "link": "art/butterflyAnimation",
         "title": "Analog Animation",
