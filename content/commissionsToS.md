@@ -42,15 +42,15 @@ By engaging my services, the Client acknowledges that they have read, understood
 
 ### 6.1 Updates
 
-I may modify these terms at any time without prior notice. Any artwork commissioned in the future may abide by different terms.
+I may modify these terms at any time without prior notice. Any artwork commissioned in the future may abide by different terms. The full history and dates of each change is public. Available at the github repository of the website ``https://github.com/xorad-art/xorad-art.github.io``
 
 ---
 
 Xorad.
 
-- DeviantArt, Instagram and Twitter: @XoradArt
-- Pixiv User: 74081164
-- Vgen: Vgen.co/Xorad
-- Email: xoradcontact@gmail.com
+- DeviantArt, Instagram and Twitter: ``@XoradArt``
+- Pixiv User: ``74081164``
+- Vgen: ``Vgen.co/Xorad``
+- Email: ``xoradcontact@gmail.com``
 
-April, 2024.
+October, 2024.
