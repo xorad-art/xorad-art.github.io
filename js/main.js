@@ -1,4 +1,4 @@
-const FEATURED_LIMIT = 5;
+const FEATURED_LIMIT = 6;
 const INITIAL_FEATURED = 3;
 
 // When everything is loaded, load the header, the main content, and the footer

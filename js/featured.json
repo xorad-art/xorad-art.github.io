@@ -1,10 +1,17 @@
 [
     {
+        "image": "media/rainTower/miriAndTheGirlsCrop.webp",
+        "imageAlt": "An Illustration of Raintower characters",
+        "link": "art/rainTower",
+        "title": "Raintower",
+        "desc": "An Indie Videogame Project, I'm collaborating in"
+    },
+    {
         "image": "media/Erwin/Erwin-front.webp",
         "imageAlt": "Yawning Opossum Drawing",
         "link": "other/caringForAnOpossum",
         "title": "Erwin the opossum",
-        "desc": "A rescued opossum, now living with me"
+        "desc": "A rescued opossum that I took care of"
     },
     {
         "image": "media/braum.jpg",
