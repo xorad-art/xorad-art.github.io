@@ -13,6 +13,13 @@
         max-height: 400px;
     }
 
+    h2, h3, h4 {
+        // Images inside headings can be bigger
+        img {
+            max-height: 100%;
+        }
+    }
+
     h3 {
         text-align: left;
         // 20px padding left and right
