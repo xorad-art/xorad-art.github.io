@@ -13,6 +13,17 @@ function loadTemplate(element, templateFile) {
         .catch(error => console.error(`Error loading ${templateFile} to ${element}:`, error));
 }
 
+// Settings for code highlighting
+marked.setOptions({
+    highlight: function (code, lang) {
+        if (lang && hljs.getLanguage(lang)) {
+            return hljs.highlight(code, { language: lang }).value;
+        }
+        return hljs.highlightAuto(code).value;
+    },
+    langPrefix: 'hljs language-' // important for highlight.js styles
+});
+
 // Loads the contents of a markdown file into the given element
 function loadMarkdown(element, markdownFile) {
     const container = document.getElementById(element);
@@ -36,6 +47,15 @@ function loadMarkdown(element, markdownFile) {
             const html = marked.parse(markdown, { renderer: renderer });
             const output = "<div class='markdown-body'>" + html + "</div>";
             container.innerHTML = output;
+
+            // Highlight code blocks
+            document.querySelectorAll('pre code').forEach((block) => {
+                hljs.highlightElement(block);
+            });
+            // Render math equations
+            if (window.MathJax) {
+                MathJax.typesetPromise();
+            }
         })
         .catch(error => {
             if (error.message === '404') {
@@ -59,6 +79,17 @@ function loadMarkdown(element, markdownFile) {
 // TODO: Add code highlighting support
 function makeCustomRenderer() {
     const renderer = new marked.Renderer();
+
+    marked.setOptions({
+        renderer: renderer,
+        highlight: function (code, lang) {
+            if (lang && hljs.getLanguage(lang)) {
+                return hljs.highlight(code, { language: lang }).value;
+            }
+            return hljs.highlightAuto(code).value;
+        }
+    });
+
     renderer.link = function (href, title, text) {
         var result = ``;
         const isAbsoluteURL = /^(https?:\/\/|\/\/)/i.test(href);

@@ -24,11 +24,27 @@
     <meta name="twitter:description" content="My personal website, come and check out the last things I have done." />
     <meta name="twitter:image" content="https://xorad-art.github.io/assets/xorad_web_banner.jpg" />
 
+    
     <link rel="stylesheet" href="style/css/style.css">
+    <!-- Markdown and Templates -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/10.0.0/marked.min.js"
         integrity="sha512-EjCqglelq9tO9KdT2iRYtcj19Q8sSXblMy+5SBfogeh5TvLwmRh9dz5l1uEwNO40/cZInZsr3jti2JCNMZJsng=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="js/templateloader.js"></script>
+    
+    <!-- Highlight.js for code blocks -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+
+    <!-- MathJax for LaTeX equations -->
+    <script>
+        window.MathJax = {
+            tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+            svg: { fontCache: 'global' }
+        };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
 </head>
 
 <body>
