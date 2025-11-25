@@ -51,6 +51,6 @@ Xorad.
 - DeviantArt, Instagram and Twitter: ``@XoradArt``
 - Pixiv User: ``74081164``
 - Vgen: ``Vgen.co/Xorad``
-- Email: ``xoradcontact@gmail.com``
+- Email: ``contact@xorad.me``
 
-October, 2024.
+November, 2025.
