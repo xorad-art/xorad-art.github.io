@@ -29,4 +29,4 @@ euclidean space, using
     </iframe>
 </div>
 
-[Link to the original standalone slides](https://xorad.me/content/other/projectiveGeoPresentation.html)
+[Link to the original standalone slides](https://xorad.me/content/other/projectiveGeoIntro/FullPresentation.html)
