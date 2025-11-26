@@ -21,34 +21,64 @@
         <section
           data-background-size='contain'
           data-background-color="#161923"
-          data-background-video="Cevas-theorem_assets\734144b41945130bc5b2521a877e429934bea8d3ac7e12d540631b44c9b28bb1.mp4"
+          data-background-video="Proj-plane_assets\7ec00e2b92c5d856c9b5fd799e9c34ffaf1feaa5d4472ba6abf539c60bfed905.mp4"
           data-background-video-muted
           >
         </section>
         <section
           data-background-size='contain'
           data-background-color="#161923"
-          data-background-video="Cevas-theorem_assets\d97e2f2641cc101c7d775524522411f1163b19f6daed087d6fb5e7aaa27d2e81.mp4"
+          data-background-video="Proj-plane_assets\8ff7332074375ecebf00c5c9fabbdc57981f2bd9bbb49d4c116e470b6479e651.mp4"
           >
         </section>
         <section
           data-background-size='contain'
           data-background-color="#161923"
-          data-background-video="Cevas-theorem_assets\438f8c3141615fa5142c8336435302ab07c59d1aad363737f13ae2cbe2426c22.mp4"
+          data-background-video="Proj-plane_assets\fa02cad355ca6c4d0fac5587bf4f29f0a121665bbf861c46060c8a27283f6c94.mp4"
           >
         </section>
         <section
           data-background-size='contain'
           data-background-color="#161923"
-          data-background-video="Cevas-theorem_assets\116ed1423060156e1add5cf8e3a8b8eda5f618017b25a974ba65993e44455b75.mp4"
+          data-background-video="Proj-plane_assets\3226f4b01f51273ab995a8f61a9da63c6ff6f198ab43fae0c24ed24a27e7bc7b.mp4"
           >
         </section>
         <section
           data-background-size='contain'
           data-background-color="#161923"
-          data-background-video="Cevas-theorem_assets\0cbb56710161b4bfa84c0f5fd20e09316a8350729a1f0d7dd7d1e8b93ff6552d.mp4"
+          data-background-video="Proj-plane_assets\1624a687acd3be72613d7043c8791992c273c5883f59cc3fcdce56c11ab118a4.mp4"
           >
         </section>
+        <section
+          data-background-size='contain'
+          data-background-color="#161923"
+          data-background-video="Proj-plane_assets\f0f53e0e20646c7c50596efff6c7a7692b9736e2fdd0ebb0ddd1a32e3d9e446c.mp4"
+          >
+        </section>
+        <section
+          data-background-size='contain'
+          data-background-color="#161923"
+          data-background-video="Proj-plane_assets\9b3bf8cb4f9d9fadf51613b8456fe880db3136fba59cb037cce7073a7897005a.mp4"
+          >
+        </section>
+        <section
+          data-background-size='contain'
+          data-background-color="#161923"
+          data-background-video="Proj-plane_assets\fb9fc454ee8752b1e8a1c6818cc5f3dd48c603d2a4ef29d862bf3a7642e2f05e.mp4"
+          >
+        </section>
+        <section
+          data-background-size='contain'
+          data-background-color="#161923"
+          data-background-video="Proj-plane_assets\6d3a45e864919cb1091ea6af3088be733596ab1d3a363c24f48c44475a65741c.mp4"
+          >
+        </section>
+        <!-- <section
+          data-background-size='contain'
+          data-background-color="#161923"
+          data-background-video="Proj-plane_assets\1bc8ac5960b0ef1904d63de5c3b45e63d36d8a2a09acec6b6b37521ae1469181.mp4"
+          >
+        </section> -->
       </div>
     </div>
 
@@ -60,25 +90,70 @@
     <!-- <script src="index.js"></script> -->
     <script>
       Reveal.initialize({
+        // The "normal" size of the presentation, aspect ratio will
+        // be preserved when the presentation is scaled to fit different
+        // resolutions. Can be specified using percentage units.
         width: '100%',
         height: '100%',
+        // Factor of the display size that should remain empty around
+        // the content
         margin: 0.04,
+        // Bounds for smallest/largest possible scale to apply to content
         minScale: 0.2,
         maxScale: 2.0,
+        // Display presentation control arrows
         controls: false,
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
         controlsTutorial: true,
+        // Determines where controls appear, "edges" or "bottom-right"
         controlsLayout: 'bottom-right',
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
         controlsBackArrows: 'faded',
+        // Display a presentation progress bar
         progress: false,
+        // Display the page number of the current slide
+        // - true:    Show slide number
+        // - false:   Hide slide number
+        //
+        // Can optionally be set as a string that specifies the number formatting:
+        // - "h.v":   Horizontal . vertical slide number (default)
+        // - "h/v":   Horizontal / vertical slide number
+        // - "c":   Flattened slide number
+        // - "c/t":   Flattened slide number / total slides
+        //
+        // Alternatively, you can provide a function that returns the slide
+        // number for the current slide. The function should take in a slide
+        // object and return an array with one string [slideNumber] or
+        // three strings [n1,delimiter,n2]. See #formatSlideNumber().
         slideNumber: false,
+        // Can be used to limit the contexts in which the slide number appears
+        // - "all":      Always show the slide number
+        // - "print":    Only when printing to PDF
+        // - "speaker":  Only in the speaker view
         showSlideNumber: 'all',
+        // Use 1 based indexing for # links to match slide number (default is zero
+        // based)
         hashOneBasedIndex: false,
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
         hash: false,
+        // Flags if we should monitor the hash and change slides accordingly
         respondToHashChanges: false,
+        // Enable support for jump-to-slide navigation shortcuts
         jumpToSlide: true,
+        // Push each slide change to the browser history.  Implies `hash: true`
         history: false,
+        // Enable keyboard shortcuts for navigation
         keyboard: true,
+        // Optional function that blocks keyboard events when retuning false
+        //
+        // If you set this to 'focused', we will only capture keyboard events
+        // for embedded decks when they are in focus
         keyboardCondition: null,
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
         disableLayout: false,
         // Enable the slide overview mode
         overview: true,
@@ -90,6 +165,30 @@
         loop: false,
         // Change the presentation direction to be RTL
         rtl: false,
+        // Changes the behavior of our navigation directions.
+        //
+        // "default"
+        // Left/right arrow keys step between horizontal slides, up/down
+        // arrow keys step between vertical slides. Space key steps through
+        // all slides (both horizontal and vertical).
+        //
+        // "linear"
+        // Removes the up/down arrows. Left/right arrows step through all
+        // slides (both horizontal and vertical).
+        //
+        // "grid"
+        // When this is enabled, stepping left/right from a vertical stack
+        // to an adjacent vertical stack will land you at the same vertical
+        // index.
+        //
+        // Consider a deck with six slides ordered in two vertical stacks:
+        // 1.1    2.1
+        // 1.2    2.2
+        // 1.3    2.3
+        //
+        // If you're on slide 1.3 and navigate right, you will normally move
+        // from 1.3 -> 2.1. If "grid" is used, the same navigation takes you
+        // from 1.3 -> 2.3.
         navigationMode: 'default',
         // Randomizes the order of slides each time the presentation loads
         shuffle: false,

@@ -1,5 +1,12 @@
 [
     {
+        "image": "media/projectiveGeoIntro/banner.webp",
+        "imageAlt": "An diagram of Pascal's theorem",
+        "link": "other/projectiveGeoIntro.md",
+        "title": "Projective Geometry Introduction",
+        "desc": "The basics of Synthetic Projective Geometry"
+    },
+    {
         "image": "media/rainTower/miriAndTheGirlsCrop.webp",
         "imageAlt": "An Illustration of Raintower characters",
         "link": "art/rainTower",
