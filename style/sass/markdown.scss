@@ -67,6 +67,19 @@
             padding: 0 10px;
         }
     }
+
+    iframe {
+        display: block;
+        max-width: 100%;
+        border: 3px solid rgba($secondary-color, 0.4);
+        border-radius: 5px;
+        
+        &:focus {
+            border: 3px solid rgba($accent-color, 1.0);
+        //     border-color: $accent-color; // or any variable you want
+        //     box-shadow: 0 0 0 3px rgba($accent-color, 0.25);
+        }
+    }
 }
 
 // @media only screen and (max-width: $tablet-width) {

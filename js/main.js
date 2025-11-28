@@ -49,3 +49,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
     window.addEventListener("scroll", checkFeaturedVisibility);
 });
+
+
+document.addEventListener("click", (e) => {
+    const link = e.target.closest("a.dynamic-link");
+    if (!link) return;
+
+    // Middle-click, Ctrl-click, Cmd-click → let browser open new tab
+    if (e.button === 1 || e.metaKey || e.ctrlKey) return;
+
+    e.preventDefault();
+
+    const file = decodeURIComponent(link.getAttribute("href").substring(1));
+    loadMarkdown("main", file);
+});

@@ -97,7 +97,7 @@ function makeCustomRenderer() {
             result = `<a href="${href}" title="${title || ''}" target="_blank">${text}</a>`;
         }
         else if (href.endsWith('.md')) {
-            result = `<button onclick="loadMarkdown('main', '${href}')" title="${title || ''}">${text}</button>`;
+            result = `<a href="#${href}" title="${title || ''}" class="dynamic-link">${text}</a>`
         }
         else if (href.endsWith('/')) {
             // This is then a folder of images, so a reader a is loaded
