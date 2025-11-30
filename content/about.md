@@ -44,4 +44,4 @@ There are still **a lot** of things to do, but, I'm working on it. I'm planning 
 - [ ] Fix the missing links for mail and Patreon
 - [ ] Add a way to view source code
 - [ ] Update the Recent art file
-
+- [ ] Add support for colored mathjax

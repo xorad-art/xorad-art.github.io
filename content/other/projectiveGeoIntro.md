@@ -96,8 +96,24 @@ This isn't really that much of a stretch, when we construct euclidean 3D space $
 You can imagine the line at infinity like any other line, but as orthogonal to the other two directions. Inside the projective plane you can use [homogeneous coordinates](https://en.wikipedia.org/wiki/Homogeneous_coordinates) to represent points infinitely far away with finite coordinates, they are worth it's own article. But I want to keep things [synthetic](https://en.wikipedia.org/wiki/Synthetic_geometry), no coordinates for now, but if you ever came across projection matrices in 3D [like this one](https://learnopengl.com/Getting-Started/Camera) and wondered why are they 4x4 that's the reason:
 
 <div>
-$$LookAt = \begin{bmatrix} \color{red}{R_x} & \color{red}{R_y} & \color{red}{R_z} & 0 \\ \color{green}{U_x} & \color{green}{U_y} & \color{green}{U_z} & 0 \\ \color{blue}{D_x} & \color{blue}{D_y} & \color{blue}{D_z} & 0 \\ 0 & 0 & 0  & 1 \end{bmatrix} * \begin{bmatrix} 1 & 0 & 0 & -\color{purple}{P_x} \\ 0 & 1 & 0 & -\color{purple}{P_y} \\ 0 & 0 & 1 & -\color{purple}{P_z} \\ 0 & 0 & 0  & 1 \end{bmatrix}$$
+$$
+LookAt =
+\begin{bmatrix}
+R_x & R_y & R_z & 0 \\
+U_x & U_y & U_z & 0 \\
+D_x & D_y & D_z & 0 \\
+0   & 0   & 0   & 1
+\end{bmatrix}
+*
+\begin{bmatrix}
+1 & 0 & 0 & -P_x \\
+0 & 1 & 0 & -P_y \\
+0 & 0 & 1 & -P_z \\
+0 & 0 & 0 & 1
+\end{bmatrix}
+$$
 </div>
+
 
 They are using coordinates for a Projective Space, which needs an extra direction.
 
