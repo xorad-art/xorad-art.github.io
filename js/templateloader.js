@@ -76,7 +76,6 @@ function loadMarkdown(element, markdownFile) {
 }
 
 
-// TODO: Add code highlighting support
 function makeCustomRenderer() {
     const renderer = new marked.Renderer();
 

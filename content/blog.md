@@ -1,5 +1,20 @@
 # Blog
 
+## Projective Geometry
+
+I made an [**introduction for projective geometry**](other/projectiveGeoIntro.md), it is rather heavy on math, but I'm proud of how it ended up:
+
+<div style="position:relative;padding-bottom:56.25%;">
+    <iframe
+        style="width:100%;height:100%;position:absolute;left:0px;top:0px;"
+        frameborder="0"
+        width="100%"
+        height="100%"
+        allow="autoplay"
+        src="media/projectiveGeoIntro/Pascals-theorem.html">
+    </iframe>
+</div>
+
 ## Opossum Business
 
 More recently [**I took care of a weird looking cat.**](other/caringForAnOpossum.md)

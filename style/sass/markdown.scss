@@ -33,7 +33,7 @@
         text-align: left;
     }
 
-    // Bold text is instead of bold highlighted text
+    // Bold text is highlighted instead
     strong {
         font-weight: inherit;
         color: $accent-color;
@@ -53,10 +53,6 @@
             font-family: monospace;
             text-align: left;
         }
-    }
-
-    button {
-        text-decoration: underline;
     }
 
     blockquote {

@@ -6,7 +6,7 @@ I'm **Xorad**, and I'm an illustrator based in Mexico. I'm passionate about art,
 
 ![Xorad](/media/xorad.jpg)
 
-I'm currently studying Computer Systems Engineering at the [National Polytechnic Institute](https://www.ipn.mx/ "IPN on Spanish") at [ESCOM](https://www.escom.ipn.mx/ "Escuela Superior de Cómputo").
+~~I'm currently studying Computer Systems Engineering at the [National Polytechnic Institute](https://www.ipn.mx/ "IPN on Spanish") at [ESCOM](https://www.escom.ipn.mx/ "Escuela Superior de Cómputo").~~ Doing a Math degree at [UNAM](https://www.unam.mx/)
 
 > Because I get this often, my nickname is pronounced like "Shorad". My mascot is a tardigrade, I find them really cute with their unicelular eyes.
 
@@ -38,8 +38,10 @@ Most of my notes are done in [Markdown](https://www.markdownguide.org/ "A guide 
 
 There are still **a lot** of things to do, but, I'm working on it. I'm planning to add a blog, and a main page with a list of my projects, but, I'm not in a hurry. For now, the bulk of the development is done, and I should focus on adding content.
 
-- [x] Add a contact widget
-- [ ] Add a project Page
-- [ ] Add a blog Page
-- [ ] Fix the missing links for mail and Patreon
 - [x] Add a carousel for reading my webcomics here
+- [x] Add a Project Page
+- [x] Add a Blog Page
+- [ ] Fix the missing links for mail and Patreon
+- [ ] Add a way to view source code
+- [ ] Update the Recent art file
+
