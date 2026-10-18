@@ -1,6 +1,6 @@
 # Projective Geometry
 
-**2025/11/29**
+> **2025/11/29**
 
 ## An Extension of Euclidean Space
 
@@ -29,11 +29,10 @@ $$\frac{AS}{SB} \cdot \frac{BP}{PC} \cdot \frac{CQ}{QA} = -1$$
 > Change the current slide using the **arrow keys** or by **swiping**
 <div style="position:relative;padding-bottom:56.25%;">
     <iframe
-        style="width:100%;height:100%;position:absolute;left:0px;top:0px;"
-        frameborder="0"
-        width="100%"
-        height="100%"
+        class="manim-slides"
+        style="width:100%;height:100%;position:absolute;left:0px;
         allow="autoplay"
+        loading="lazy"
         src="media/projectiveGeoIntro/Cevas-theorem.html">
     </iframe>
 </div>
@@ -80,11 +79,10 @@ From there we can consider a new line, made by all of those points **the line at
 
 <div style="position:relative;padding-bottom:56.25%;">
     <iframe
+        class="manim-slides"
         style="width:100%;height:100%;position:absolute;left:0px;top:0px;"
-        frameborder="0"
-        width="100%"
-        height="100%"
         allow="autoplay"
+        loading="lazy"
         src="media/projectiveGeoIntro/Proj-plane.html">
     </iframe>
 </div>
@@ -131,11 +129,10 @@ Perspective in this context is very similar to that, we transform objects on one
 
 <div style="position:relative;padding-bottom:56.25%;">
     <iframe
+        class="manim-slides"
         style="width:100%;height:100%;position:absolute;left:0px;top:0px;"
-        frameborder="0"
-        width="100%"
-        height="100%"
         allow="autoplay"
+        loading="lazy"
         src="media/projectiveGeoIntro/Perspective.html">
     </iframe>
 </div>
@@ -177,11 +174,10 @@ Consists of three related properties of projective transformations
 
 <div style="position:relative;padding-bottom:56.25%;">
     <iframe
+        class="manim-slides"
         style="width:100%;height:100%;position:absolute;left:0px;top:0px;"
-        frameborder="0"
-        width="100%"
-        height="100%"
         allow="autoplay"
+        loading="lazy"
         src="media/projectiveGeoIntro/Transforms.html">
     </iframe>
 </div>
@@ -209,11 +205,10 @@ Let the tangent hexagon have vertices $ABCDEF$. The diagonals from opposite vert
 
 <div style="position:relative;padding-bottom:56.25%;">
     <iframe
+        class="manim-slides"
         style="width:100%;height:100%;position:absolute;left:0px;top:0px;"
-        frameborder="0"
-        width="100%"
-        height="100%"
         allow="autoplay"
+        loading="lazy"
         src="media/projectiveGeoIntro/Pascals-theorem.html">
     </iframe>
 </div>

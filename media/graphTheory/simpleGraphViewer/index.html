@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Weighted Graph Editor</title>
+
+  <link rel="stylesheet" href="/style/css/style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+  <style>
+    canvas {
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: -1;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="canvas-container"></div>
+
+  <script src="main.js"></script>
+  <script src="graph.js"></script>
+  <script src="mouseInteraction.js"></script>
+  <script src="physics.js"></script>
+  <script src="kruskalSimulation.js"></script>
+  <script>
+    WRITE_WEIGHTS = false;
+    ENABLE_SIMULATION = false;
+    ENABLE_PHYSICS = true;
+    // EDGE_COLOR = {r:188, g:189, b:208}; // text-color
+
+    // Petersen Graph
+    nodes = [{"id":0,"x":-301,"y":38},{"id":1,"x":-214,"y":-53},{"id":2,"x":-43,"y":-81},{"id":3,"x":-73,"y":89},{"id":4,"x":-212,"y":196},{"id":5,"x":-123,"y":-12},{"id":6,"x":-301,"y":149},{"id":7,"x":30,"y":71},{"id":8,"x":-208,"y":85},{"id":9,"x":-88,"y":194},];
+    edges = [{"u":0,"v":1,"weight":1},{"u":1,"v":2,"weight":1},{"u":2,"v":3,"weight":1},{"u":3,"v":4,"weight":1},{"u":4,"v":0,"weight":1},{"u":0,"v":5,"weight":1},{"u":1,"v":6,"weight":1},{"u":2,"v":7,"weight":1},{"u":3,"v":8,"weight":1},{"u":4,"v":9,"weight":1},{"u":5,"v":7,"weight":1},{"u":9,"v":7,"weight":1},{"u":9,"v":6,"weight":1},{"u":6,"v":8,"weight":1},{"u":8,"v":5,"weight":1},];
+  
+  </script>
+</body>
+</html>

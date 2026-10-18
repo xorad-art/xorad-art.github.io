@@ -18,24 +18,24 @@
   <body>
     <div class="reveal">
       <div class="slides">
-        <!-- <section
+        <section
           data-background-size='contain'
           data-background-color="#161923"
           data-background-video="Cevas-theorem_assets\734144b41945130bc5b2521a877e429934bea8d3ac7e12d540631b44c9b28bb1.mp4"
           data-background-video-muted
           >
-        </section> -->
+        </section>
         <section
           data-background-size='contain'
           data-background-color="#161923"
           data-background-video="Cevas-theorem_assets\d97e2f2641cc101c7d775524522411f1163b19f6daed087d6fb5e7aaa27d2e81.mp4"
-          >
+          data-background-video-muted>
         </section>
         <section
           data-background-size='contain'
           data-background-color="#161923"
           data-background-video="Cevas-theorem_assets\438f8c3141615fa5142c8336435302ab07c59d1aad363737f13ae2cbe2426c22.mp4"
-          >
+          data-background-video-muted>
         </section>
         <section
           data-background-size='contain'
@@ -43,12 +43,6 @@
           data-background-video="Cevas-theorem_assets\116ed1423060156e1add5cf8e3a8b8eda5f618017b25a974ba65993e44455b75.mp4"
           >
         </section>
-        <!-- <section
-          data-background-size='contain'
-          data-background-color="#161923"
-          data-background-video="Cevas-theorem_assets\0cbb56710161b4bfa84c0f5fd20e09316a8350729a1f0d7dd7d1e8b93ff6552d.mp4"
-          >
-        </section> -->
       </div>
     </div>
 
@@ -199,8 +193,13 @@
         () => {
           var currentVideos = Reveal.getCurrentSlide().slideBackgroundContentElement.getElementsByTagName("video");
           if (currentVideos.length > 0) {
-            if (currentVideos[0].paused == true) currentVideos[0].play();
-            else currentVideos[0].pause();
+            const video = currentVideos[0];
+            if (video.paused) {
+                video.muted = true;
+                video.play();
+            } else {
+                video.pause();
+            }
           } else {
             Reveal.next();
           }

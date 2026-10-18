@@ -7,9 +7,6 @@ I made an [**introduction for projective geometry**](other/projectiveGeoIntro.md
 <div style="position:relative;padding-bottom:56.25%;">
     <iframe
         style="width:100%;height:100%;position:absolute;left:0px;top:0px;"
-        frameborder="0"
-        width="100%"
-        height="100%"
         allow="autoplay"
         src="media/projectiveGeoIntro/Pascals-theorem.html">
     </iframe>

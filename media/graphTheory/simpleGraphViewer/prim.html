@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Weighted Graph Editor</title>
+
+  <link rel="stylesheet" href="/style/css/style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+  <style>
+    canvas {
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: -1;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="canvas-container"></div>
+
+  <script src="main.js"></script>
+  <script src="graph.js"></script>
+  <script src="mouseInteraction.js"></script>
+  <script src="physics.js"></script>
+  <script src="primSimulation.js"></script>
+  <script>
+    WRITE_WEIGHTS = true;
+    ENABLE_PHYSICS = true;
+
+    nodes = [{"id":0,"x":-165,"y":-7},{"id":1,"x":-35,"y":-80},{"id":2,"x":111,"y":-53},{"id":3,"x":91,"y":100},{"id":4,"x":-55,"y":83},{"id":5,"x":306,"y":-14},{"id":6,"x":216,"y":-152},{"id":7,"x":232,"y":124},{"id":8,"x":-243,"y":118},{"id":9,"x":-165,"y":-161},{"id":10,"x":-286,"y":-46},];
+    edges = [{"u":8,"v":0,"weight":1},{"u":7,"v":3,"weight":1},{"u":2,"v":3,"weight":2},{"u":9,"v":0,"weight":2},{"u":10,"v":9,"weight":2},{"u":7,"v":5,"weight":2},{"u":4,"v":0,"weight":3},{"u":2,"v":6,"weight":3},{"u":0,"v":1,"weight":4},{"u":8,"v":10,"weight":4},{"u":6,"v":5,"weight":4},{"u":1,"v":4,"weight":5},{"u":9,"v":1,"weight":5},{"u":3,"v":4,"weight":10},{"u":1,"v":2,"weight":20},];
+
+  </script>
+</body>
+</html>

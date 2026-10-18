@@ -70,7 +70,10 @@ function loadMarkdown(element, markdownFile) {
                         console.error('Error loading 404.md:', error);
                     });
             } else {
-                console.error(`Error loading ${markdownFile} to ${element}:`, error);
+                // I'm tired of that error showing up, it's normal when deleting cache.
+                if (error.message != "MathJax.typesetPromise is not a function"){
+                    console.error(`Error loading ${markdownFile} to ${element}:`, error);
+                }
             }
         });
 }

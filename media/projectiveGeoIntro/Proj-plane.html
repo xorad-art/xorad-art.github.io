@@ -298,8 +298,13 @@
         () => {
           var currentVideos = Reveal.getCurrentSlide().slideBackgroundContentElement.getElementsByTagName("video");
           if (currentVideos.length > 0) {
-            if (currentVideos[0].paused == true) currentVideos[0].play();
-            else currentVideos[0].pause();
+            const video = currentVideos[0];
+            if (video.paused) {
+                video.muted = true;
+                video.play();
+            } else {
+                video.pause();
+            }
           } else {
             Reveal.next();
           }
