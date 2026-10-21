@@ -1,4 +1,28 @@
+let lastPointerTime = 0;
+let lastPointerX = 0;
+let lastPointerY = 0;
+
 function mousePressed() {
+  if (mouseX <60 && mouseY<70){
+    return; // Don't want to handle double clicks on the UI corner
+  }
+
+  const now = millis();
+  if (now - lastPointerTime < 300) {
+    const dx = mouseX - lastPointerX;
+    const dy = mouseY - lastPointerY;
+    if (dx * dx + dy * dy < 100) {
+      doubleTap();
+      lastPointerTime = 0;
+      return false;
+    }
+  }
+  lastPointerTime = now;
+  lastPointerX = mouseX;
+  lastPointerY = mouseY;
+
+
+
   const graphPosition = screenToGraph(mouseX,mouseY);
   initialMousePos.x = graphPosition.x
   initialMousePos.y = graphPosition.y
@@ -22,7 +46,6 @@ function mousePressed() {
     selectedNode = newNode;
     draggingNode = newNode;
     selectedEdge = null;
-    graphChanges += 1;
     return false;
   }
   draggingNode = null;
@@ -67,10 +90,8 @@ function mouseReleased() {
   draggingEdge = null;
 }
 
-function doubleClicked() {
-  if (mouseX <60 && mouseY<70){
-    return; // Don't want to handle double clicks on the UI corner
-  }
+// This is not called by p5.js but it's called by mousePressed()
+function doubleTap() {
   graphChanges += 1;
   const edge = getEdgeAtScreenPosition(mouseX,mouseY);
   const node = getNodeAtScreenPosition(mouseX,mouseY);

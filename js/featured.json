@@ -1,5 +1,12 @@
 [
     {
+        "image": "media/graphTheory/SpanningTreeImage.webp",
+        "imageAlt": "An image of a Graph",
+        "link": "other/spanningTrees.md",
+        "title": "Spanning Trees",
+        "desc": "Some Graph Theory"
+    },
+    {
         "image": "media/projectiveGeoIntro/banner.webp",
         "imageAlt": "An diagram of Pascal's theorem",
         "link": "other/projectiveGeoIntro.md",

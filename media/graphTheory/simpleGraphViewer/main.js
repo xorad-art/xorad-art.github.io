@@ -39,6 +39,7 @@ function setup() {
     EDGE_COLOR = color(53, 58, 74); // bg-light-color but higher value;
   }
   
+  windowResized();
   
   if (ENABLE_SIMULATION && ENABLE_PHYSICS) {
     playButton = createButton("▶ Run");
@@ -86,7 +87,7 @@ function draw() {
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
   if (windowWidth < 900) {
-    RESIZING_SCALE = max(windowWidth/900, 0.25)
+    RESIZING_SCALE = max(sqrt(windowWidth/900), 0.25)
   }
 }
 
